@@ -1,0 +1,1383 @@
+$ stack exec -- ghc-core --no-syntax --w $(which ghc)  -- -O BenchSum.hs > BenchSum.corehs
+$ cat BenchSum.corehs
+[1 of 1] Compiling Main             ( BenchSum.hs, BenchSum.o )
+
+==================== Tidy Core ====================
+Result size of Tidy Core = {terms: 187, types: 208, coercions: 25}
+
+-- RHS size: {terms: 2, types: 0, coercions: 0}
+lvl_rchE :: Int
+
+lvl_rchE = I# 0#
+
+-- RHS size: {terms: 3, types: 2, coercions: 0}
+$ssum [InlPrag=INLINE (sat-args=0)] :: [Int] -> Int
+[GblId,
+ Arity=1,
+
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=False,boring_ok=False)
+         Tmpl= foldl
+                 @ Int @ Int $fNumInt_$c+ (I# 0#)}]
+$ssum =
+  foldl @ Int @ Int $fNumInt_$c+ lvl_rchE
+
+-- RHS size: {terms: 2, types: 0, coercions: 0}
+$trModule2 :: TrName
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 30 20}]
+$trModule2 = TrNameS "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0}
+$trModule1 :: TrName
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 30 20}]
+$trModule1 = TrNameS "Main"#
+
+-- RHS size: {terms: 3, types: 0, coercions: 0}
+$trModule :: Module
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+$trModule = Module $trModule2 $trModule1
+
+-- RHS size: {terms: 4, types: 0, coercions: 0}
+myList :: [Int]
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 40 0}]
+myList = efdtInt 1# 2# 10000#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0}
+main12 :: [Char]
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 50 0}]
+main12 = unpackCString# "avgSimpl"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0}
+main11 :: [Char]
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 40 0}]
+main11 = unpackCString# "sum2"#
+
+-- RHS size: {terms: 15, types: 10, coercions: 0}
+$wgo [InlPrag=[0], Occ=LoopBreaker]
+  :: [Int] -> Int# -> Int#
+
+$wgo =
+  \ (w_scfB :: [Int]) (ww_scfF :: Int#) ->
+    case w_scfB of _ [Occ=Dead] {
+      [] -> ww_scfF;
+      : y_abbo ys_abbp ->
+        case y_abbo of _ [Occ=Dead] { I# y1_abaT ->
+        $wgo ys_abbp (+# ww_scfF y1_abaT)
+        }
+    }
+
+-- RHS size: {terms: 8, types: 3, coercions: 0}
+main_eta [InlPrag=INLINE[0]] :: [Int] -> Int
+[GblId,
+ Arity=1,
+
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=1,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (w_scfL [Occ=Once] :: [Int]) ->
+                 case $wgo w_scfL 0# of ww_scfO { __DEFAULT ->
+                 I# ww_scfO
+                 }}]
+main_eta =
+  \ (w_scfL :: [Int]) ->
+    case $wgo w_scfL 0# of ww_scfO { __DEFAULT ->
+    I# ww_scfO
+    }
+
+-- RHS size: {terms: 30, types: 28, coercions: 0}
+$wgo1 [InlPrag=[0], Occ=LoopBreaker]
+  :: ([Int] -> Int)
+     -> [Int]
+     -> Int#
+     -> State# RealWorld
+     -> (# State# RealWorld, () #)
+[GblId,
+ Arity=4,
+
+$wgo1 =
+  \ (w_scfQ :: [Int] -> Int)
+    (w1_scfR :: [Int])
+    (ww_scfW :: Int#)
+    (w2_scfT [OS=OneShot] :: State# RealWorld) ->
+    case tagToEnum# @ Bool (<=# ww_scfW 0#)
+    of _ [Occ=Dead] {
+      False ->
+        case seq#
+               @ ()
+               @ RealWorld
+               (case w_scfQ w1_scfR of _ [Occ=Dead] { I# ipv_abcm ->
+                ()
+                })
+               w2_scfT
+        of _ [Occ=Dead] { (# ipv_abcL, ipv1_abcM #) ->
+        $wgo1 w_scfQ w1_scfR (-# ww_scfW 1#) ipv_abcL
+        };
+      True -> (# w2_scfT, () #)
+    }
+
+-- RHS size: {terms: 7, types: 3, coercions: 0}
+$wmain1 [InlPrag=[0]]
+  :: Int#
+     -> State# RealWorld
+     -> (# State# RealWorld, () #)
+[GblId,
+ Arity=2,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [0 0] 40 0}]
+$wmain1 =
+  \ (ww_scg3 :: Int#)
+    (w_scg0 [OS=OneShot] :: State# RealWorld) ->
+    $wgo1 main_eta myList ww_scg3 w_scg0
+
+-- RHS size: {terms: 8, types: 5, coercions: 0}
+main10 [InlPrag=INLINE[0]]
+  :: Int64
+     -> State# RealWorld
+     -> (# State# RealWorld, () #)
+[GblId,
+ Arity=2,
+
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (w_scfZ [Occ=Once!] :: Int64)
+                 (w1_scg0 [Occ=Once, OS=OneShot]
+                    :: State# RealWorld) ->
+                 case w_scfZ of _ [Occ=Dead] { I64# ww1_scg3 [Occ=Once] ->
+                 $wmain1 ww1_scg3 w1_scg0
+                 }}]
+main10 =
+  \ (w_scfZ :: Int64)
+    (w1_scg0 [OS=OneShot] :: State# RealWorld) ->
+    case w_scfZ of _ [Occ=Dead] { I64# ww1_scg3 ->
+    $wmain1 ww1_scg3 w1_scg0
+    }
+
+-- RHS size: {terms: 3, types: 0, coercions: 8}
+main9 :: Benchmark
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+main9 =
+  Criterion.Types.Benchmark
+    main11
+    (main10
+     `cast` ((<Int64>_R -> Sym (N:IO[0] <()>_R))
+             ; Sym Criterion.Types.N:Benchmarkable[0]
+             :: ((Int64
+                  -> State# RealWorld
+                  -> (# State# RealWorld, () #)) :: *)
+                ~R#
+                (Benchmarkable :: *)))
+
+-- RHS size: {terms: 2, types: 0, coercions: 0}
+main8 :: [Char]
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 40 0}]
+main8 = unpackCString# "sum"#
+
+-- RHS size: {terms: 30, types: 28, coercions: 0}
+$wgo12 [InlPrag=[0], Occ=LoopBreaker]
+  :: ([Int] -> Int)
+     -> [Int]
+     -> Int#
+     -> State# RealWorld
+     -> (# State# RealWorld, () #)
+[GblId,
+ Arity=4,
+
+$wgo12 =
+  \ (w_scg6 :: [Int] -> Int)
+    (w1_scg7 :: [Int])
+    (ww_scgc :: Int#)
+    (w2_scg9 [OS=OneShot] :: State# RealWorld) ->
+    case tagToEnum# @ Bool (<=# ww_scgc 0#)
+    of _ [Occ=Dead] {
+      False ->
+        case seq#
+               @ ()
+               @ RealWorld
+               (case w_scg6 w1_scg7 of _ [Occ=Dead] { I# ipv_abcm ->
+                ()
+                })
+               w2_scg9
+        of _ [Occ=Dead] { (# ipv_abcL, ipv1_abcM #) ->
+        $wgo12 w_scg6 w1_scg7 (-# ww_scgc 1#) ipv_abcL
+        };
+      True -> (# w2_scg9, () #)
+    }
+
+-- RHS size: {terms: 7, types: 3, coercions: 0}
+$wmain [InlPrag=[0]]
+  :: Int#
+     -> State# RealWorld
+     -> (# State# RealWorld, () #)
+[GblId,
+ Arity=2,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [0 0] 40 0}]
+$wmain =
+  \ (ww_scgj :: Int#)
+    (w_scgg [OS=OneShot] :: State# RealWorld) ->
+    $wgo12 $ssum myList ww_scgj w_scgg
+
+-- RHS size: {terms: 8, types: 5, coercions: 0}
+main7 [InlPrag=INLINE[0]]
+  :: Int64
+     -> State# RealWorld
+     -> (# State# RealWorld, () #)
+[GblId,
+ Arity=2,
+
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (w_scgf [Occ=Once!] :: Int64)
+                 (w1_scgg [Occ=Once, OS=OneShot]
+                    :: State# RealWorld) ->
+                 case w_scgf of _ [Occ=Dead] { I64# ww1_scgj [Occ=Once] ->
+                 $wmain ww1_scgj w1_scgg
+                 }}]
+main7 =
+  \ (w_scgf :: Int64)
+    (w1_scgg [OS=OneShot] :: State# RealWorld) ->
+    case w_scgf of _ [Occ=Dead] { I64# ww1_scgj ->
+    $wmain ww1_scgj w1_scgg
+    }
+
+-- RHS size: {terms: 3, types: 0, coercions: 8}
+main6 :: Benchmark
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+main6 =
+  Criterion.Types.Benchmark
+    main8
+    (main7
+     `cast` ((<Int64>_R -> Sym (N:IO[0] <()>_R))
+             ; Sym Criterion.Types.N:Benchmarkable[0]
+             :: ((Int64
+                  -> State# RealWorld
+                  -> (# State# RealWorld, () #)) :: *)
+                ~R#
+                (Benchmarkable :: *)))
+
+-- RHS size: {terms: 3, types: 2, coercions: 0}
+main5 :: [Benchmark]
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+main5 =
+  : @ Benchmark main6 ([] @ Benchmark)
+
+-- RHS size: {terms: 3, types: 1, coercions: 0}
+main4 :: [Benchmark]
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+main4 = : @ Benchmark main9 main5
+
+-- RHS size: {terms: 3, types: 0, coercions: 0}
+main3 :: Benchmark
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+main3 = Criterion.Types.BenchGroup main12 main4
+
+-- RHS size: {terms: 3, types: 2, coercions: 0}
+main2 :: [Benchmark]
+[GblId,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+main2 =
+  : @ Benchmark main3 ([] @ Benchmark)
+
+-- RHS size: {terms: 3, types: 0, coercions: 0}
+main1
+  :: State# RealWorld
+     -> (# State# RealWorld, () #)
+[GblId,
+ Arity=1,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 30 60}]
+main1 = Criterion.defaultMain2 defaultConfig main2
+
+-- RHS size: {terms: 1, types: 0, coercions: 3}
+main :: IO ()
+[GblId,
+ Arity=1,
+
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= main1
+               `cast` (Sym (N:IO[0] <()>_R)
+                       :: ((State# RealWorld
+                            -> (# State# RealWorld, () #)) :: *)
+                          ~R#
+                          (IO () :: *))}]
+main =
+  main1
+  `cast` (Sym (N:IO[0] <()>_R)
+          :: ((State# RealWorld
+               -> (# State# RealWorld, () #)) :: *)
+             ~R#
+             (IO () :: *))
+
+-- RHS size: {terms: 2, types: 1, coercions: 3}
+main13
+  :: State# RealWorld
+     -> (# State# RealWorld, () #)
+[GblId,
+ Arity=1,
+
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 20 60}]
+main13 =
+  runMainIO1
+    @ ()
+    (main1
+     `cast` (Sym (N:IO[0] <()>_R)
+             :: ((State# RealWorld
+                  -> (# State# RealWorld, () #)) :: *)
+                ~R#
+                (IO () :: *)))
+
+-- RHS size: {terms: 1, types: 0, coercions: 3}
+:main :: IO ()
+[GblId,
+ Arity=1,
+
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= main13
+               `cast` (Sym (N:IO[0] <()>_R)
+                       :: ((State# RealWorld
+                            -> (# State# RealWorld, () #)) :: *)
+                          ~R#
+                          (IO () :: *))}]
+:main =
+  main13
+  `cast` (Sym (N:IO[0] <()>_R)
+          :: ((State# RealWorld
+               -> (# State# RealWorld, () #)) :: *)
+             ~R#
+             (IO () :: *))
+
+------ Local rules for imported ids --------
+"SPEC/Main sum @ Int" [ALWAYS]
+    forall ($dNum_sba1 :: Num Int).
+      sum @ Int $dNum_sba1
+      = $ssum
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl __stginit_main@main:Main
+__stginit_main@main:Main:
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+lvl_rchE_closure:
+	.quad	I#_static_info
+	.quad	0
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl $ssum_closure
+$ssum_closure:
+	.quad	$ssum_info
+
+==================== Asm code ====================
+.text
+.align 3
+$ssum_info_dsp:
+.align 3
+	.quad	4294967301
+	.quad	0
+	.quad	15
+.globl $ssum_info
+$ssum_info:
+_cciB:
+	movq %r14,%rdi
+	leaq lvl_rchE_closure+1(%rip),%rsi
+	leaq $fNumInt_$c+_closure+2(%rip),%r14
+	jmp foldl_info
+	.long  $ssum_info - $ssum_info_dsp
+
+==================== Asm code ====================
+.const
+.align 3
+.align 0
+cciJ_str:
+	.byte	109
+	.byte	97
+	.byte	105
+	.byte	110
+	.byte	0
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl $trModule2_closure
+$trModule2_closure:
+	.quad	TrNameS_static_info
+	.quad	cciJ_str
+
+==================== Asm code ====================
+.const
+.align 3
+.align 0
+cciN_str:
+	.byte	77
+	.byte	97
+	.byte	105
+	.byte	110
+	.byte	0
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl $trModule1_closure
+$trModule1_closure:
+	.quad	TrNameS_static_info
+	.quad	cciN_str
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl $trModule_closure
+$trModule_closure:
+	.quad	Module_static_info
+	.quad	$trModule2_closure+1
+	.quad	$trModule1_closure+1
+	.quad	3
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl myList_closure
+myList_closure:
+	.quad	myList_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+==================== Asm code ====================
+.text
+.align 3
+myList_info_dsp:
+.align 3
+	.quad	0
+	.quad	22
+.globl myList_info
+myList_info:
+_cciY:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _cciZ
+_ccj0:
+	movq %r13,%rdi
+	movq %rbx,%rsi
+	subq $8,%rsp
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _cciX
+_cciW:
+	movq stg_bh_upd_frame_info@GOTPCREL(%rip),%rbx
+	movq %rbx,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $10000,%edi
+	movl $2,%esi
+	movl $1,%r14d
+	addq $-16,%rbp
+	jmp efdtInt_info
+_cciZ:
+	jmp *-16(%r13)
+_cciX:
+	jmp *(%rbx)
+	.long  myList_info - myList_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main12_closure
+main12_closure:
+	.quad	main12_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+==================== Asm code ====================
+.const
+.align 3
+.align 0
+ccjd_str:
+	.byte	97
+	.byte	118
+	.byte	103
+	.byte	83
+	.byte	105
+	.byte	109
+	.byte	112
+	.byte	108
+	.byte	0
+
+==================== Asm code ====================
+.text
+.align 3
+main12_info_dsp:
+.align 3
+	.quad	0
+	.quad	22
+.globl main12_info
+main12_info:
+_ccje:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _ccjf
+_ccjg:
+	movq %r13,%rdi
+	movq %rbx,%rsi
+	subq $8,%rsp
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _ccjc
+_ccjb:
+	movq stg_bh_upd_frame_info@GOTPCREL(%rip),%rbx
+	movq %rbx,-16(%rbp)
+	movq %rax,-8(%rbp)
+	leaq ccjd_str(%rip),%r14
+	addq $-16,%rbp
+	jmp unpackCString#_info
+_ccjf:
+	jmp *-16(%r13)
+_ccjc:
+	jmp *(%rbx)
+	.long  main12_info - main12_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main11_closure
+main11_closure:
+	.quad	main11_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+==================== Asm code ====================
+.const
+.align 3
+.align 0
+ccju_str:
+	.byte	115
+	.byte	117
+	.byte	109
+	.byte	50
+	.byte	0
+
+==================== Asm code ====================
+.text
+.align 3
+main11_info_dsp:
+.align 3
+	.quad	0
+	.quad	22
+.globl main11_info
+main11_info:
+_ccjv:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _ccjw
+_ccjx:
+	movq %r13,%rdi
+	movq %rbx,%rsi
+	subq $8,%rsp
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _ccjt
+_ccjs:
+	movq stg_bh_upd_frame_info@GOTPCREL(%rip),%rbx
+	movq %rbx,-16(%rbp)
+	movq %rax,-8(%rbp)
+	leaq ccju_str(%rip),%r14
+	addq $-16,%rbp
+	jmp unpackCString#_info
+_ccjw:
+	jmp *-16(%r13)
+_ccjt:
+	jmp *(%rbx)
+	.long  main11_info - main11_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl $wgo_closure
+$wgo_closure:
+	.quad	$wgo_info
+
+==================== Asm code ====================
+.text
+.align 3
+$wgo_info_dsp:
+.align 3
+	.quad	8589934606
+	.quad	0
+	.quad	15
+.globl $wgo_info
+$wgo_info:
+_cck2:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jae _ccjS
+_cck3:
+	leaq $wgo_closure(%rip),%rbx
+	jmp *-8(%r13)
+_cck0:
+	leaq block_ccka_info(%rip),%rax
+	movq %rax,-8(%rbp)
+	movq 14(%rbx),%rax
+	movq 6(%rbx),%rbx
+	movq %rax,(%rbp)
+	addq $-8,%rbp
+	testb $7,%bl
+	jne _ccka
+_cckc:
+	jmp *(%rbx)
+.align 3
+	.quad	65
+	.quad	32
+block_ccjV_info:
+_ccjV:
+	movq %rbx,%rax
+	andl $7,%eax
+	cmpq $1,%rax
+	jne _cck0
+_ccjZ:
+	movq 8(%rbp),%rbx
+	addq $16,%rbp
+	jmp *(%rbp)
+.align 3
+	.quad	130
+	.quad	32
+block_ccka_info:
+_ccka:
+	leaq 7(%rbx),%rax
+	movq 16(%rbp),%rbx
+	addq (%rax),%rbx
+	movq 8(%rbp),%rax
+	addq $24,%rbp
+_nckt:
+	movq %rbx,%rsi
+	movq %rax,%r14
+_ccjS:
+	leaq block_ccjV_info(%rip),%rax
+	movq %rax,-16(%rbp)
+	movq %r14,%rbx
+	movq %rsi,-8(%rbp)
+	addq $-16,%rbp
+	testb $7,%bl
+	jne _ccjV
+_ccjW:
+	jmp *(%rbx)
+	.long  $wgo_info - $wgo_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main_eta_closure
+main_eta_closure:
+	.quad	main_eta_info
+
+==================== Asm code ====================
+.text
+.align 3
+main_eta_info_dsp:
+.align 3
+	.quad	4294967301
+	.quad	0
+	.quad	15
+.globl main_eta_info
+main_eta_info:
+_cckE:
+	leaq -8(%rbp),%rax
+	cmpq %r15,%rax
+	jb _cckI
+_cckJ:
+	leaq block_cckC_info(%rip),%rax
+	movq %rax,-8(%rbp)
+	xorl %esi,%esi
+	addq $-8,%rbp
+	jmp $wgo_info
+_cckM:
+	movq $16,904(%r13)
+	jmp *stg_gc_unbx_r1@GOTPCREL(%rip)
+.align 3
+	.quad	0
+	.quad	32
+block_cckC_info:
+_cckC:
+	addq $16,%r12
+	cmpq 856(%r13),%r12
+	ja _cckM
+_cckL:
+	leaq I#_con_info(%rip),%rax
+	movq %rax,-8(%r12)
+	movq %rbx,(%r12)
+	leaq -7(%r12),%rbx
+	addq $8,%rbp
+	jmp *(%rbp)
+_cckI:
+	leaq main_eta_closure(%rip),%rbx
+	jmp *-8(%r13)
+	.long  main_eta_info - main_eta_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl $wgo1_closure
+$wgo1_closure:
+	.quad	$wgo1_info
+
+==================== Asm code ====================
+.text
+.align 3
+sat_sci1_info_dsp:
+.align 3
+	.quad	2
+	.quad	19
+sat_sci1_info:
+_cclq:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _cclr
+_ccls:
+	movq stg_upd_frame_info@GOTPCREL(%rip),%rax
+	movq %rax,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	leaq block_cclo_info(%rip),%rax
+	movq %rax,-24(%rbp)
+	movq 24(%rbx),%r14
+	movq 16(%rbx),%rbx
+	addq $-24,%rbp
+	jmp stg_ap_p_fast
+_cclr:
+	jmp *-16(%r13)
+.align 3
+	.quad	0
+	.quad	32
+block_cclo_info:
+_cclo:
+	leaq ()_closure+1(%rip),%rbx
+	addq $8,%rbp
+	jmp *(%rbp)
+	.long  sat_sci1_info - sat_sci1_info_dsp
+
+==================== Asm code ====================
+.text
+.align 3
+$wgo1_info_dsp:
+.align 3
+	.quad	17179869206
+	.quad	0
+	.quad	15
+.globl $wgo1_info
+$wgo1_info:
+_cclw:
+	leaq -32(%rbp),%rax
+	cmpq %r15,%rax
+	jb _cclx
+_cclc:
+	addq $32,%r12
+	cmpq 856(%r13),%r12
+	ja _cclA
+_cclz:
+	testq %rdi,%rdi
+	jle _cclH
+_cclD:
+	leaq sat_sci1_info(%rip),%rax
+	movq %rax,-24(%r12)
+	movq %r14,-8(%r12)
+	movq %rsi,(%r12)
+	leaq block_cclB_info(%rip),%rax
+	movq %rax,-32(%rbp)
+	leaq -24(%r12),%rbx
+	movq %r14,-24(%rbp)
+	movq %rsi,-16(%rbp)
+	movq %rdi,-8(%rbp)
+	addq $-32,%rbp
+	testb $7,%bl
+	jne _cclB
+_cclE:
+	jmp *(%rbx)
+_cclH:
+	addq $-32,%r12
+	leaq ()_closure+1(%rip),%rbx
+	jmp *(%rbp)
+.align 3
+	.quad	259
+	.quad	32
+block_cclB_info:
+_cclB:
+	movq 8(%rbp),%rax
+	movq 16(%rbp),%rcx
+	movq 24(%rbp),%rdx
+	decq %rdx
+	addq $32,%rbp
+_nclW:
+	movq %rdx,%rdi
+	movq %rcx,%rsi
+	movq %rax,%r14
+	jmp _cclc
+_cclA:
+	movq $32,904(%r13)
+_cclx:
+	leaq $wgo1_closure(%rip),%rbx
+	jmp *-8(%r13)
+	.long  $wgo1_info - $wgo1_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl $wmain1_closure
+$wmain1_closure:
+	.quad	$wmain1_info
+	.quad	0
+
+==================== Asm code ====================
+.text
+.align 3
+$wmain1_info_dsp:
+.align 3
+	.quad	Scm5_srt-($wmain1_info)+0
+	.quad	8589934596
+	.quad	0
+	.quad	4294967311
+.globl $wmain1_info
+$wmain1_info:
+_ccm2:
+	movq %r14,%rdi
+	leaq myList_closure(%rip),%rsi
+	leaq main_eta_closure+1(%rip),%r14
+	jmp $wgo1_info
+	.long  $wmain1_info - $wmain1_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main10_closure
+main10_closure:
+	.quad	main10_info
+	.quad	0
+
+==================== Asm code ====================
+.text
+.align 3
+main10_info_dsp:
+.align 3
+	.quad	Scm5_srt-(main10_info)+8
+	.quad	8589934597
+	.quad	0
+	.quad	12884901903
+.globl main10_info
+main10_info:
+_ccmk:
+	leaq -8(%rbp),%rax
+	cmpq %r15,%rax
+	jb _ccml
+_ccmm:
+	leaq block_ccmh_info(%rip),%rax
+	movq %rax,-8(%rbp)
+	movq %r14,%rbx
+	addq $-8,%rbp
+	testb $7,%bl
+	jne _ccmh
+_ccmi:
+	jmp *(%rbx)
+_ccml:
+	leaq main10_closure(%rip),%rbx
+	jmp *-8(%r13)
+.align 3
+	.quad	Scm5_srt-(block_ccmh_info)+8
+	.quad	0
+	.quad	4294967328
+block_ccmh_info:
+_ccmh:
+	movq 7(%rbx),%r14
+	addq $8,%rbp
+	jmp $wmain1_info
+	.long  main10_info - main10_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main9_closure
+main9_closure:
+	.quad	Criterion.Types.Benchmark_static_info
+	.quad	main11_closure
+	.quad	main10_closure+2
+	.quad	0
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main8_closure
+main8_closure:
+	.quad	main8_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+==================== Asm code ====================
+.const
+.align 3
+.align 0
+ccmE_str:
+	.byte	115
+	.byte	117
+	.byte	109
+	.byte	0
+
+==================== Asm code ====================
+.text
+.align 3
+main8_info_dsp:
+.align 3
+	.quad	0
+	.quad	22
+.globl main8_info
+main8_info:
+_ccmF:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _ccmG
+_ccmH:
+	movq %r13,%rdi
+	movq %rbx,%rsi
+	subq $8,%rsp
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _ccmD
+_ccmC:
+	movq stg_bh_upd_frame_info@GOTPCREL(%rip),%rbx
+	movq %rbx,-16(%rbp)
+	movq %rax,-8(%rbp)
+	leaq ccmE_str(%rip),%r14
+	addq $-16,%rbp
+	jmp unpackCString#_info
+_ccmG:
+	jmp *-16(%r13)
+_ccmD:
+	jmp *(%rbx)
+	.long  main8_info - main8_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl $wgo12_closure
+$wgo12_closure:
+	.quad	$wgo12_info
+
+==================== Asm code ====================
+.text
+.align 3
+sat_scik_info_dsp:
+.align 3
+	.quad	2
+	.quad	19
+sat_scik_info:
+_ccnl:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _ccnm
+_ccnn:
+	movq stg_upd_frame_info@GOTPCREL(%rip),%rax
+	movq %rax,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	leaq block_ccnj_info(%rip),%rax
+	movq %rax,-24(%rbp)
+	movq 24(%rbx),%r14
+	movq 16(%rbx),%rbx
+	addq $-24,%rbp
+	jmp stg_ap_p_fast
+_ccnm:
+	jmp *-16(%r13)
+.align 3
+	.quad	0
+	.quad	32
+block_ccnj_info:
+_ccnj:
+	leaq ()_closure+1(%rip),%rbx
+	addq $8,%rbp
+	jmp *(%rbp)
+	.long  sat_scik_info - sat_scik_info_dsp
+
+==================== Asm code ====================
+.text
+.align 3
+$wgo12_info_dsp:
+.align 3
+	.quad	17179869206
+	.quad	0
+	.quad	15
+.globl $wgo12_info
+$wgo12_info:
+_ccnr:
+	leaq -32(%rbp),%rax
+	cmpq %r15,%rax
+	jb _ccns
+_ccn7:
+	addq $32,%r12
+	cmpq 856(%r13),%r12
+	ja _ccnv
+_ccnu:
+	testq %rdi,%rdi
+	jle _ccnC
+_ccny:
+	leaq sat_scik_info(%rip),%rax
+	movq %rax,-24(%r12)
+	movq %r14,-8(%r12)
+	movq %rsi,(%r12)
+	leaq block_ccnw_info(%rip),%rax
+	movq %rax,-32(%rbp)
+	leaq -24(%r12),%rbx
+	movq %r14,-24(%rbp)
+	movq %rsi,-16(%rbp)
+	movq %rdi,-8(%rbp)
+	addq $-32,%rbp
+	testb $7,%bl
+	jne _ccnw
+_ccnz:
+	jmp *(%rbx)
+_ccnC:
+	addq $-32,%r12
+	leaq ()_closure+1(%rip),%rbx
+	jmp *(%rbp)
+.align 3
+	.quad	259
+	.quad	32
+block_ccnw_info:
+_ccnw:
+	movq 8(%rbp),%rax
+	movq 16(%rbp),%rcx
+	movq 24(%rbp),%rdx
+	decq %rdx
+	addq $32,%rbp
+_ncnR:
+	movq %rdx,%rdi
+	movq %rcx,%rsi
+	movq %rax,%r14
+	jmp _ccn7
+_ccnv:
+	movq $32,904(%r13)
+_ccns:
+	leaq $wgo12_closure(%rip),%rbx
+	jmp *-8(%r13)
+	.long  $wgo12_info - $wgo12_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl $wmain_closure
+$wmain_closure:
+	.quad	$wmain_info
+	.quad	0
+
+==================== Asm code ====================
+.text
+.align 3
+$wmain_info_dsp:
+.align 3
+	.quad	Scm5_srt-($wmain_info)+0
+	.quad	8589934596
+	.quad	0
+	.quad	4294967311
+.globl $wmain_info
+$wmain_info:
+_ccnX:
+	movq %r14,%rdi
+	leaq myList_closure(%rip),%rsi
+	leaq $ssum_closure+1(%rip),%r14
+	jmp $wgo12_info
+	.long  $wmain_info - $wmain_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main7_closure
+main7_closure:
+	.quad	main7_info
+	.quad	0
+
+==================== Asm code ====================
+.text
+.align 3
+main7_info_dsp:
+.align 3
+	.quad	Scm5_srt-(main7_info)+24
+	.quad	8589934597
+	.quad	0
+	.quad	12884901903
+.globl main7_info
+main7_info:
+_ccoe:
+	leaq -8(%rbp),%rax
+	cmpq %r15,%rax
+	jb _ccof
+_ccog:
+	leaq block_ccob_info(%rip),%rax
+	movq %rax,-8(%rbp)
+	movq %r14,%rbx
+	addq $-8,%rbp
+	testb $7,%bl
+	jne _ccob
+_ccoc:
+	jmp *(%rbx)
+_ccof:
+	leaq main7_closure(%rip),%rbx
+	jmp *-8(%r13)
+.align 3
+	.quad	Scm5_srt-(block_ccob_info)+24
+	.quad	0
+	.quad	4294967328
+block_ccob_info:
+_ccob:
+	movq 7(%rbx),%r14
+	addq $8,%rbp
+	jmp $wmain_info
+	.long  main7_info - main7_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main6_closure
+main6_closure:
+	.quad	Criterion.Types.Benchmark_static_info
+	.quad	main8_closure
+	.quad	main7_closure+2
+	.quad	0
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main5_closure
+main5_closure:
+	.quad	:_static_info
+	.quad	main6_closure+2
+	.quad	[]_closure+1
+	.quad	0
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main4_closure
+main4_closure:
+	.quad	:_static_info
+	.quad	main9_closure+2
+	.quad	main5_closure+2
+	.quad	0
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main3_closure
+main3_closure:
+	.quad	Criterion.Types.BenchGroup_static_info
+	.quad	main12_closure
+	.quad	main4_closure+2
+	.quad	0
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main2_closure
+main2_closure:
+	.quad	:_static_info
+	.quad	main3_closure+3
+	.quad	[]_closure+1
+	.quad	0
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main1_closure
+main1_closure:
+	.quad	main1_info
+	.quad	0
+
+==================== Asm code ====================
+.text
+.align 3
+main1_info_dsp:
+.align 3
+	.quad	Scm5_srt-(main1_info)+40
+	.quad	4294967299
+	.quad	0
+	.quad	30064771087
+.globl main1_info
+main1_info:
+_ccoE:
+	leaq main2_closure+2(%rip),%rsi
+	leaq Criterion.Options.defaultConfig_closure(%rip),%r14
+	jmp Criterion.defaultMain2_info
+	.long  main1_info - main1_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main_closure
+main_closure:
+	.quad	main_info
+	.quad	0
+
+==================== Asm code ====================
+.text
+.align 3
+main_info_dsp:
+.align 3
+	.quad	Scm5_srt-(main_info)+64
+	.quad	4294967299
+	.quad	0
+	.quad	4294967311
+.globl main_info
+main_info:
+_ccoP:
+	jmp main1_info
+	.long  main_info - main_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl main13_closure
+main13_closure:
+	.quad	main13_info
+	.quad	0
+
+==================== Asm code ====================
+.text
+.align 3
+main13_info_dsp:
+.align 3
+	.quad	Scm5_srt-(main13_info)+64
+	.quad	4294967299
+	.quad	0
+	.quad	12884901903
+.globl main13_info
+main13_info:
+_ccp0:
+	leaq main1_closure+1(%rip),%r14
+	jmp runMainIO1_info
+	.long  main13_info - main13_info_dsp
+
+==================== Asm code ====================
+.data
+.align 3
+.align 0
+.globl :main_closure
+:main_closure:
+	.quad	:main_info
+	.quad	0
+
+==================== Asm code ====================
+.text
+.align 3
+:main_info_dsp:
+.align 3
+	.quad	Scm5_srt-(:main_info)+80
+	.quad	4294967299
+	.quad	0
+	.quad	4294967311
+.globl :main_info
+:main_info:
+_ccpb:
+	jmp main13_info
+	.long  :main_info - :main_info_dsp
+
+==================== Asm code ====================
+.const_data
+.align 3
+.align 0
+Scm5_srt:
+	.quad	myList_closure
+	.quad	$wmain1_closure
+	.quad	main10_closure
+	.quad	$wmain_closure
+	.quad	main7_closure
+	.quad	main2_closure
+	.quad	Criterion.Options.defaultConfig_closure
+	.quad	Criterion.defaultMain2_closure
+	.quad	main1_closure
+	.quad	runMainIO1_closure
+	.quad	main13_closure
+
+Linking BenchSum ...
+
