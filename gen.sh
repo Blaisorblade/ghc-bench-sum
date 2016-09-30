@@ -10,7 +10,10 @@ sayDo() {
 
 for resolver in 2.22 6.19 7.0; do
     ghcPath=$(stack --resolver lts-$resolver exec which ghc)
+    # Prevent stack from reusing benchmarks built for another GHC.
+    rm -rf .stack-work
+    stack --resolver lts-$resolver build --bench --no-run-benchmarks
     sayDo "stack --resolver lts-$resolver exec -- ghc-core -w $ghcPath --no-syntax -- -O BenchSum.hs" BenchSum-lts-$resolver.corehs
     sayDo "stack --resolver lts-$resolver exec -- ghc-core -w $ghcPath -- -O BenchSum.hs" BenchSum-lts-$resolver-color.corehs
-    sayDo "stack bench" Zoutput-lts-$resolver.txt
+    sayDo "stack --resolver lts-$resolver bench" Zoutput-lts-$resolver.txt
 done
