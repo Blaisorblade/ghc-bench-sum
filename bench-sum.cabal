@@ -12,7 +12,7 @@ Library
 Benchmark BenchSum
   Type:                exitcode-stdio-1.0
   Main-Is:             BenchSum.hs
-  build-depends:       base >=4.9 && <4.10
+  build-depends:       base >=4.6 && <4.10
                      , criterion
                      , deepseq >= 1.4.1.1
   ghc-options:         -Wall
