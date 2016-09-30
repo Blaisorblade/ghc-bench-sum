@@ -1,0 +1,33 @@
+$ stack --resolver lts-2.22 bench
+bench-sum-0.1.0.0: benchmarks
+Running 1 benchmarks...
+Benchmark BenchSum: RUNNING...
+benchmarking avgSimpl/fsum2
+time                 28.02 μs   (27.29 μs .. 28.81 μs)
+                     0.996 R²   (0.994 R² .. 0.998 R²)
+mean                 28.46 μs   (27.92 μs .. 28.98 μs)
+std dev              1.754 μs   (1.497 μs .. 2.009 μs)
+variance introduced by outliers: 67% (severely inflated)
+
+benchmarking avgSimpl/fsum1
+time                 28.93 μs   (28.30 μs .. 29.50 μs)
+                     0.997 R²   (0.995 R² .. 0.999 R²)
+mean                 29.29 μs   (28.81 μs .. 29.73 μs)
+std dev              1.528 μs   (1.243 μs .. 1.893 μs)
+variance introduced by outliers: 59% (severely inflated)
+
+benchmarking avgSimpl/psum2
+time                 29.09 μs   (28.46 μs .. 29.56 μs)
+                     0.997 R²   (0.995 R² .. 0.998 R²)
+mean                 28.57 μs   (28.11 μs .. 29.08 μs)
+std dev              1.672 μs   (1.446 μs .. 1.919 μs)
+variance introduced by outliers: 65% (severely inflated)
+
+benchmarking avgSimpl/P.sum
+time                 28.93 μs   (28.21 μs .. 29.56 μs)
+                     0.996 R²   (0.994 R² .. 0.997 R²)
+mean                 28.70 μs   (28.13 μs .. 29.25 μs)
+std dev              2.012 μs   (1.759 μs .. 2.298 μs)
+variance introduced by outliers: 73% (severely inflated)
+
+Benchmark BenchSum: FINISH

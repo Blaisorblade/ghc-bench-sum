@@ -1,0 +1,2205 @@
+$ stack --resolver lts-7.0 exec -- ghc-core -- -O BenchSum.hs
+[[2;35m1[0m [2;32mof[0m [2;35m1[0m] Compiling Main             ( BenchSum.hs, BenchSum.o )
+
+[2;31m====================[0m Tidy Core [2;31m====================[0m
+Result size [2;32mof[0m Tidy Core [2;31m=[0m {terms[2;31m:[0m [2;35m330[0m, types[2;31m:[0m [2;35m376[0m, coercions[2;31m:[0m [2;35m41[0m}
+
+[2;34m--[0m[2;34m RHS size: {terms: 2, types: 0, coercions: 0}
+[0m[2;31m$[0mtrModule2 [2;31m::[0m TrName
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m30[0m [2;35m20[0m}]
+[2;31m$[0mtrModule2 [2;31m=[0m TrNameS [2;35m"main"[0m[2;31m#[0m
+
+[2;34m--[0m[2;34m RHS size: {terms: 2, types: 0, coercions: 0}
+[0m[2;31m$[0mtrModule1 [2;31m::[0m TrName
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m30[0m [2;35m20[0m}]
+[2;31m$[0mtrModule1 [2;31m=[0m TrNameS [2;35m"Main"[0m[2;31m#[0m
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 0}
+[0m[2;31m$[0mtrModule [2;31m::[0m Module
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+[2;31m$[0mtrModule [2;31m=[0m Module [2;31m$[0mtrModule2 [2;31m$[0mtrModule1
+
+[2;34m--[0m[2;34m RHS size: {terms: 4, types: 0, coercions: 0}
+[0mmyList [2;31m::[0m [Int]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mFalse, ConLike[2;31m=[0mFalse,
+         WorkFree[2;31m=[0mFalse, Expandable[2;31m=[0mFalse, Guidance[2;31m=[0mIF_ARGS [] [2;35m40[0m [2;35m0[0m}]
+myList [2;31m=[0m efdtInt [2;35m1[0m[2;31m#[0m [2;35m2[0m[2;31m#[0m [2;35m10000[0m[2;31m#[0m
+
+[2;34m--[0m[2;34m RHS size: {terms: 2, types: 0, coercions: 0}
+[0mmain21 [2;31m::[0m [Char]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mFalse, ConLike[2;31m=[0mFalse,
+         WorkFree[2;31m=[0mFalse, Expandable[2;31m=[0mFalse, Guidance[2;31m=[0mIF_ARGS [] [2;35m50[0m [2;35m0[0m}]
+main21 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"avgSimpl"[0m[2;31m#[0m
+
+[2;34m--[0m[2;34m RHS size: {terms: 2, types: 0, coercions: 0}
+[0mmain20 [2;31m::[0m [Char]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mFalse, ConLike[2;31m=[0mFalse,
+         WorkFree[2;31m=[0mFalse, Expandable[2;31m=[0mFalse, Guidance[2;31m=[0mIF_ARGS [] [2;35m50[0m [2;35m0[0m}]
+main20 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"fsum2"[0m[2;31m#[0m
+
+[2;34m--[0m[2;34m RHS size: {terms: 15, types: 10, coercions: 0}
+[0m[2;31m$[0mwgo3 [InlPrag[2;31m=[0m[[2;35m0[0m], Occ[2;31m=[0mLoopBreaker]
+  [2;31m::[0m [Int] [2;31m->[0m Int[2;31m#[0m [2;31m->[0m Int[2;31m#[0m
+
+[2;31m$[0mwgo3 [2;31m=[0m
+  [2;31m\[0m (w_sciY [2;31m::[0m [Int]) (ww_scj2 [2;31m::[0m Int[2;31m#[0m) [2;31m->[0m
+    [2;32mcase[0m w_sciY [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+      [] [2;31m->[0m ww_scj2;
+      [2;31m:[0m y_abcY ys_abcZ [2;31m->[0m
+        [2;32mcase[0m y_abcY [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m y1_abbz [2;31m->[0m
+        [2;31m$[0mwgo3 ys_abcZ ([2;31m+#[0m ww_scj2 y1_abbz)
+        }
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 8, types: 3, coercions: 0}
+[0mmain_eta2 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]] [2;31m::[0m [Int] [2;31m->[0m Int
+[GblId,
+ Arity[2;31m=[0m[2;35m1[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
+         Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m1[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
+         Tmpl[2;31m=[0m [2;31m\[0m (w_scj8 [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
+                 [2;32mcase[0m [2;31m$[0mwgo3 w_scj8 [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_scjb { __DEFAULT [2;31m->[0m
+                 I[2;31m#[0m ww_scjb
+                 }}]
+main_eta2 [2;31m=[0m
+  [2;31m\[0m (w_scj8 [2;31m::[0m [Int]) [2;31m->[0m
+    [2;32mcase[0m [2;31m$[0mwgo3 w_scj8 [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_scjb { __DEFAULT [2;31m->[0m
+    I[2;31m#[0m ww_scjb
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 30, types: 28, coercions: 0}
+[0m[2;31m$[0mwgo4 [InlPrag[2;31m=[0m[[2;35m0[0m], Occ[2;31m=[0mLoopBreaker]
+  [2;31m::[0m ([Int] [2;31m->[0m Int)
+     [2;31m->[0m [Int]
+     [2;31m->[0m Int[2;31m#[0m
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m4[0m,
+
+[2;31m$[0mwgo4 [2;31m=[0m
+  [2;31m\[0m (w_scjd [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_scje [2;31m::[0m [Int])
+    (ww_scjj [2;31m::[0m Int[2;31m#[0m)
+    (w2_scjg [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_scjj [2;35m0[0m[2;31m#[0m)
+    [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+      False [2;31m->[0m
+        [2;32mcase[0m seq[2;31m#[0m
+               [2;31m@[0m ()
+               [2;31m@[0m RealWorld
+               ([2;32mcase[0m w_scjd w1_scje [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abdW [2;31m->[0m
+                ()
+                })
+               w2_scjg
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abel, ipv1_abem [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwgo4 w_scjd w1_scje ([2;31m-#[0m ww_scjj [2;35m1[0m[2;31m#[0m) ipv_abel
+        };
+      True [2;31m->[0m ([2;31m#[0m w2_scjg, () [2;31m#[0m)
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 7, types: 3, coercions: 0}
+[0m[2;31m$[0mwmain3 [InlPrag[2;31m=[0m[[2;35m0[0m]]
+  [2;31m::[0m Int[2;31m#[0m
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m2[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [[2;35m0[0m [2;35m0[0m] [2;35m40[0m [2;35m0[0m}]
+[2;31m$[0mwmain3 [2;31m=[0m
+  [2;31m\[0m (ww_scjq [2;31m::[0m Int[2;31m#[0m)
+    (w_scjn [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;31m$[0mwgo4 main_eta2 myList ww_scjq w_scjn
+
+[2;34m--[0m[2;34m RHS size: {terms: 8, types: 5, coercions: 0}
+[0mmain19 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
+  [2;31m::[0m Int64
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m2[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
+         Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m2[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
+         Tmpl[2;31m=[0m [2;31m\[0m (w_scjm [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
+                 (w1_scjn [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
+                    [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+                 [2;32mcase[0m w_scjm [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjq [Occ[2;31m=[0mOnce] [2;31m->[0m
+                 [2;31m$[0mwmain3 ww1_scjq w1_scjn
+                 }}]
+main19 [2;31m=[0m
+  [2;31m\[0m (w_scjm [2;31m::[0m Int64)
+    (w1_scjn [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m w_scjm [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjq [2;31m->[0m
+    [2;31m$[0mwmain3 ww1_scjq w1_scjn
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 8}
+[0mmain18 [2;31m::[0m Benchmark
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main18 [2;31m=[0m
+  Criterion.Types.Benchmark
+    main20
+    (main19
+     `cast` (([2;31m<[0mInt64[2;31m>[0m_R [2;31m->[0m Sym (N[2;31m:[0mIO[[2;35m0[0m] [2;31m<[0m()[2;31m>[0m_R))
+             ; Sym Criterion.Types.N[2;31m:[0mBenchmarkable[[2;35m0[0m]
+             [2;31m::[0m ((Int64
+                  [2;31m->[0m State[2;31m#[0m RealWorld
+                  [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)) [2;31m::[0m [2;31m*[0m)
+                [2;31m~[0mR[2;31m#[0m
+                (Benchmarkable [2;31m::[0m [2;31m*[0m)))
+
+[2;34m--[0m[2;34m RHS size: {terms: 2, types: 0, coercions: 0}
+[0mmain17 [2;31m::[0m [Char]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mFalse, ConLike[2;31m=[0mFalse,
+         WorkFree[2;31m=[0mFalse, Expandable[2;31m=[0mFalse, Guidance[2;31m=[0mIF_ARGS [] [2;35m50[0m [2;35m0[0m}]
+main17 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"fsum1"[0m[2;31m#[0m
+
+[2;34m--[0m[2;34m RHS size: {terms: 2, types: 0, coercions: 0}
+[0mmain10 [2;31m::[0m Int
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m20[0m}]
+main10 [2;31m=[0m I[2;31m#[0m [2;35m0[0m[2;31m#[0m
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 2, coercions: 0}
+[0mmain_eta [2;31m::[0m [Int] [2;31m->[0m Int
+[GblId,
+ Arity[2;31m=[0m[2;35m1[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m30[0m [2;35m60[0m}]
+main_eta [2;31m=[0m
+  foldl [2;31m@[0m Int [2;31m@[0m Int [2;31m$[0mfNumInt_[2;31m$[0mc[2;31m+[0m main10
+
+[2;34m--[0m[2;34m RHS size: {terms: 30, types: 28, coercions: 0}
+[0m[2;31m$[0mwgo2 [InlPrag[2;31m=[0m[[2;35m0[0m], Occ[2;31m=[0mLoopBreaker]
+  [2;31m::[0m ([Int] [2;31m->[0m Int)
+     [2;31m->[0m [Int]
+     [2;31m->[0m Int[2;31m#[0m
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m4[0m,
+
+[2;31m$[0mwgo2 [2;31m=[0m
+  [2;31m\[0m (w_scjt [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_scju [2;31m::[0m [Int])
+    (ww_scjz [2;31m::[0m Int[2;31m#[0m)
+    (w2_scjw [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_scjz [2;35m0[0m[2;31m#[0m)
+    [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+      False [2;31m->[0m
+        [2;32mcase[0m seq[2;31m#[0m
+               [2;31m@[0m ()
+               [2;31m@[0m RealWorld
+               ([2;32mcase[0m w_scjt w1_scju [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abdW [2;31m->[0m
+                ()
+                })
+               w2_scjw
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abel, ipv1_abem [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwgo2 w_scjt w1_scju ([2;31m-#[0m ww_scjz [2;35m1[0m[2;31m#[0m) ipv_abel
+        };
+      True [2;31m->[0m ([2;31m#[0m w2_scjw, () [2;31m#[0m)
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 7, types: 3, coercions: 0}
+[0m[2;31m$[0mwmain2 [InlPrag[2;31m=[0m[[2;35m0[0m]]
+  [2;31m::[0m Int[2;31m#[0m
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m2[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [[2;35m0[0m [2;35m0[0m] [2;35m40[0m [2;35m0[0m}]
+[2;31m$[0mwmain2 [2;31m=[0m
+  [2;31m\[0m (ww_scjG [2;31m::[0m Int[2;31m#[0m)
+    (w_scjD [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;31m$[0mwgo2 main_eta myList ww_scjG w_scjD
+
+[2;34m--[0m[2;34m RHS size: {terms: 8, types: 5, coercions: 0}
+[0mmain16 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
+  [2;31m::[0m Int64
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m2[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
+         Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m2[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
+         Tmpl[2;31m=[0m [2;31m\[0m (w_scjC [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
+                 (w1_scjD [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
+                    [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+                 [2;32mcase[0m w_scjC [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjG [Occ[2;31m=[0mOnce] [2;31m->[0m
+                 [2;31m$[0mwmain2 ww1_scjG w1_scjD
+                 }}]
+main16 [2;31m=[0m
+  [2;31m\[0m (w_scjC [2;31m::[0m Int64)
+    (w1_scjD [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m w_scjC [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjG [2;31m->[0m
+    [2;31m$[0mwmain2 ww1_scjG w1_scjD
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 8}
+[0mmain15 [2;31m::[0m Benchmark
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main15 [2;31m=[0m
+  Criterion.Types.Benchmark
+    main17
+    (main16
+     `cast` (([2;31m<[0mInt64[2;31m>[0m_R [2;31m->[0m Sym (N[2;31m:[0mIO[[2;35m0[0m] [2;31m<[0m()[2;31m>[0m_R))
+             ; Sym Criterion.Types.N[2;31m:[0mBenchmarkable[[2;35m0[0m]
+             [2;31m::[0m ((Int64
+                  [2;31m->[0m State[2;31m#[0m RealWorld
+                  [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)) [2;31m::[0m [2;31m*[0m)
+                [2;31m~[0mR[2;31m#[0m
+                (Benchmarkable [2;31m::[0m [2;31m*[0m)))
+
+[2;34m--[0m[2;34m RHS size: {terms: 2, types: 0, coercions: 0}
+[0mmain14 [2;31m::[0m [Char]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mFalse, ConLike[2;31m=[0mFalse,
+         WorkFree[2;31m=[0mFalse, Expandable[2;31m=[0mFalse, Guidance[2;31m=[0mIF_ARGS [] [2;35m50[0m [2;35m0[0m}]
+main14 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"psum2"[0m[2;31m#[0m
+
+[2;34m--[0m[2;34m RHS size: {terms: 15, types: 10, coercions: 0}
+[0m[2;31m$[0mwgo [InlPrag[2;31m=[0m[[2;35m0[0m], Occ[2;31m=[0mLoopBreaker]
+  [2;31m::[0m [Int] [2;31m->[0m Int[2;31m#[0m [2;31m->[0m Int[2;31m#[0m
+
+[2;31m$[0mwgo [2;31m=[0m
+  [2;31m\[0m (w_scjJ [2;31m::[0m [Int]) (ww_scjN [2;31m::[0m Int[2;31m#[0m) [2;31m->[0m
+    [2;32mcase[0m w_scjJ [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+      [] [2;31m->[0m ww_scjN;
+      [2;31m:[0m y_abcY ys_abcZ [2;31m->[0m
+        [2;32mcase[0m y_abcY [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m y1_abbz [2;31m->[0m
+        [2;31m$[0mwgo ys_abcZ ([2;31m+#[0m ww_scjN y1_abbz)
+        }
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 8, types: 3, coercions: 0}
+[0mmain_eta1 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]] [2;31m::[0m [Int] [2;31m->[0m Int
+[GblId,
+ Arity[2;31m=[0m[2;35m1[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
+         Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m1[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
+         Tmpl[2;31m=[0m [2;31m\[0m (w_scjT [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
+                 [2;32mcase[0m [2;31m$[0mwgo w_scjT [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_scjW { __DEFAULT [2;31m->[0m
+                 I[2;31m#[0m ww_scjW
+                 }}]
+main_eta1 [2;31m=[0m
+  [2;31m\[0m (w_scjT [2;31m::[0m [Int]) [2;31m->[0m
+    [2;32mcase[0m [2;31m$[0mwgo w_scjT [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_scjW { __DEFAULT [2;31m->[0m
+    I[2;31m#[0m ww_scjW
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 30, types: 28, coercions: 0}
+[0m[2;31m$[0mwgo1 [InlPrag[2;31m=[0m[[2;35m0[0m], Occ[2;31m=[0mLoopBreaker]
+  [2;31m::[0m ([Int] [2;31m->[0m Int)
+     [2;31m->[0m [Int]
+     [2;31m->[0m Int[2;31m#[0m
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m4[0m,
+
+[2;31m$[0mwgo1 [2;31m=[0m
+  [2;31m\[0m (w_scjY [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_scjZ [2;31m::[0m [Int])
+    (ww_sck4 [2;31m::[0m Int[2;31m#[0m)
+    (w2_sck1 [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_sck4 [2;35m0[0m[2;31m#[0m)
+    [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+      False [2;31m->[0m
+        [2;32mcase[0m seq[2;31m#[0m
+               [2;31m@[0m ()
+               [2;31m@[0m RealWorld
+               ([2;32mcase[0m w_scjY w1_scjZ [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abdW [2;31m->[0m
+                ()
+                })
+               w2_sck1
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abel, ipv1_abem [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwgo1 w_scjY w1_scjZ ([2;31m-#[0m ww_sck4 [2;35m1[0m[2;31m#[0m) ipv_abel
+        };
+      True [2;31m->[0m ([2;31m#[0m w2_sck1, () [2;31m#[0m)
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 7, types: 3, coercions: 0}
+[0m[2;31m$[0mwmain1 [InlPrag[2;31m=[0m[[2;35m0[0m]]
+  [2;31m::[0m Int[2;31m#[0m
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m2[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [[2;35m0[0m [2;35m0[0m] [2;35m40[0m [2;35m0[0m}]
+[2;31m$[0mwmain1 [2;31m=[0m
+  [2;31m\[0m (ww_sckb [2;31m::[0m Int[2;31m#[0m)
+    (w_sck8 [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;31m$[0mwgo1 main_eta1 myList ww_sckb w_sck8
+
+[2;34m--[0m[2;34m RHS size: {terms: 8, types: 5, coercions: 0}
+[0mmain13 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
+  [2;31m::[0m Int64
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m2[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
+         Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m2[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
+         Tmpl[2;31m=[0m [2;31m\[0m (w_sck7 [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
+                 (w1_sck8 [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
+                    [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+                 [2;32mcase[0m w_sck7 [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_sckb [Occ[2;31m=[0mOnce] [2;31m->[0m
+                 [2;31m$[0mwmain1 ww1_sckb w1_sck8
+                 }}]
+main13 [2;31m=[0m
+  [2;31m\[0m (w_sck7 [2;31m::[0m Int64)
+    (w1_sck8 [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m w_sck7 [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_sckb [2;31m->[0m
+    [2;31m$[0mwmain1 ww1_sckb w1_sck8
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 8}
+[0mmain12 [2;31m::[0m Benchmark
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main12 [2;31m=[0m
+  Criterion.Types.Benchmark
+    main14
+    (main13
+     `cast` (([2;31m<[0mInt64[2;31m>[0m_R [2;31m->[0m Sym (N[2;31m:[0mIO[[2;35m0[0m] [2;31m<[0m()[2;31m>[0m_R))
+             ; Sym Criterion.Types.N[2;31m:[0mBenchmarkable[[2;35m0[0m]
+             [2;31m::[0m ((Int64
+                  [2;31m->[0m State[2;31m#[0m RealWorld
+                  [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)) [2;31m::[0m [2;31m*[0m)
+                [2;31m~[0mR[2;31m#[0m
+                (Benchmarkable [2;31m::[0m [2;31m*[0m)))
+
+[2;34m--[0m[2;34m RHS size: {terms: 2, types: 0, coercions: 0}
+[0mmain11 [2;31m::[0m [Char]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mFalse, ConLike[2;31m=[0mFalse,
+         WorkFree[2;31m=[0mFalse, Expandable[2;31m=[0mFalse, Guidance[2;31m=[0mIF_ARGS [] [2;35m50[0m [2;35m0[0m}]
+main11 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"P.sum"[0m[2;31m#[0m
+
+[2;34m--[0m[2;34m RHS size: {terms: 30, types: 28, coercions: 0}
+[0m[2;31m$[0mwgo12 [InlPrag[2;31m=[0m[[2;35m0[0m], Occ[2;31m=[0mLoopBreaker]
+  [2;31m::[0m ([Int] [2;31m->[0m Int)
+     [2;31m->[0m [Int]
+     [2;31m->[0m Int[2;31m#[0m
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m4[0m,
+
+[2;31m$[0mwgo12 [2;31m=[0m
+  [2;31m\[0m (w_scke [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_sckf [2;31m::[0m [Int])
+    (ww_sckk [2;31m::[0m Int[2;31m#[0m)
+    (w2_sckh [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_sckk [2;35m0[0m[2;31m#[0m)
+    [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+      False [2;31m->[0m
+        [2;32mcase[0m seq[2;31m#[0m
+               [2;31m@[0m ()
+               [2;31m@[0m RealWorld
+               ([2;32mcase[0m w_scke w1_sckf [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abdW [2;31m->[0m
+                ()
+                })
+               w2_sckh
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abel, ipv1_abem [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwgo12 w_scke w1_sckf ([2;31m-#[0m ww_sckk [2;35m1[0m[2;31m#[0m) ipv_abel
+        };
+      True [2;31m->[0m ([2;31m#[0m w2_sckh, () [2;31m#[0m)
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 7, types: 3, coercions: 0}
+[0m[2;31m$[0mwmain [InlPrag[2;31m=[0m[[2;35m0[0m]]
+  [2;31m::[0m Int[2;31m#[0m
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m2[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [[2;35m0[0m [2;35m0[0m] [2;35m40[0m [2;35m0[0m}]
+[2;31m$[0mwmain [2;31m=[0m
+  [2;31m\[0m (ww_sckr [2;31m::[0m Int[2;31m#[0m)
+    (w_scko [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;31m$[0mwgo12 main_eta myList ww_sckr w_scko
+
+[2;34m--[0m[2;34m RHS size: {terms: 8, types: 5, coercions: 0}
+[0mmain9 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
+  [2;31m::[0m Int64
+     [2;31m->[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m2[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
+         Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m2[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
+         Tmpl[2;31m=[0m [2;31m\[0m (w_sckn [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
+                 (w1_scko [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
+                    [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+                 [2;32mcase[0m w_sckn [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_sckr [Occ[2;31m=[0mOnce] [2;31m->[0m
+                 [2;31m$[0mwmain ww1_sckr w1_scko
+                 }}]
+main9 [2;31m=[0m
+  [2;31m\[0m (w_sckn [2;31m::[0m Int64)
+    (w1_scko [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m w_sckn [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_sckr [2;31m->[0m
+    [2;31m$[0mwmain ww1_sckr w1_scko
+    }
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 8}
+[0mmain8 [2;31m::[0m Benchmark
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main8 [2;31m=[0m
+  Criterion.Types.Benchmark
+    main11
+    (main9
+     `cast` (([2;31m<[0mInt64[2;31m>[0m_R [2;31m->[0m Sym (N[2;31m:[0mIO[[2;35m0[0m] [2;31m<[0m()[2;31m>[0m_R))
+             ; Sym Criterion.Types.N[2;31m:[0mBenchmarkable[[2;35m0[0m]
+             [2;31m::[0m ((Int64
+                  [2;31m->[0m State[2;31m#[0m RealWorld
+                  [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)) [2;31m::[0m [2;31m*[0m)
+                [2;31m~[0mR[2;31m#[0m
+                (Benchmarkable [2;31m::[0m [2;31m*[0m)))
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 2, coercions: 0}
+[0mmain7 [2;31m::[0m [Benchmark]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main7 [2;31m=[0m
+  [2;31m:[0m [2;31m@[0m Benchmark main8 ([] [2;31m@[0m Benchmark)
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 1, coercions: 0}
+[0mmain6 [2;31m::[0m [Benchmark]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main6 [2;31m=[0m [2;31m:[0m [2;31m@[0m Benchmark main12 main7
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 1, coercions: 0}
+[0mmain5 [2;31m::[0m [Benchmark]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main5 [2;31m=[0m [2;31m:[0m [2;31m@[0m Benchmark main15 main6
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 1, coercions: 0}
+[0mmain4 [2;31m::[0m [Benchmark]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main4 [2;31m=[0m [2;31m:[0m [2;31m@[0m Benchmark main18 main5
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 0}
+[0mmain3 [2;31m::[0m Benchmark
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main3 [2;31m=[0m Criterion.Types.BenchGroup main21 main4
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 2, coercions: 0}
+[0mmain2 [2;31m::[0m [Benchmark]
+[GblId,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m10[0m [2;35m30[0m}]
+main2 [2;31m=[0m
+  [2;31m:[0m [2;31m@[0m Benchmark main3 ([] [2;31m@[0m Benchmark)
+
+[2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 0}
+[0mmain1
+  [2;31m::[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m1[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m30[0m [2;35m60[0m}]
+main1 [2;31m=[0m Criterion.defaultMain2 defaultConfig main2
+
+[2;34m--[0m[2;34m RHS size: {terms: 1, types: 0, coercions: 3}
+[0mmain [2;31m::[0m IO ()
+[GblId,
+ Arity[2;31m=[0m[2;35m1[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
+         Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m0[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mTrue)
+         Tmpl[2;31m=[0m main1
+               `cast` (Sym (N[2;31m:[0mIO[[2;35m0[0m] [2;31m<[0m()[2;31m>[0m_R)
+                       [2;31m::[0m ((State[2;31m#[0m RealWorld
+                            [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)) [2;31m::[0m [2;31m*[0m)
+                          [2;31m~[0mR[2;31m#[0m
+                          (IO () [2;31m::[0m [2;31m*[0m))}]
+main [2;31m=[0m
+  main1
+  `cast` (Sym (N[2;31m:[0mIO[[2;35m0[0m] [2;31m<[0m()[2;31m>[0m_R)
+          [2;31m::[0m ((State[2;31m#[0m RealWorld
+               [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)) [2;31m::[0m [2;31m*[0m)
+             [2;31m~[0mR[2;31m#[0m
+             (IO () [2;31m::[0m [2;31m*[0m))
+
+[2;34m--[0m[2;34m RHS size: {terms: 2, types: 1, coercions: 3}
+[0mmain22
+  [2;31m::[0m State[2;31m#[0m RealWorld
+     [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)
+[GblId,
+ Arity[2;31m=[0m[2;35m1[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [] [2;35m20[0m [2;35m60[0m}]
+main22 [2;31m=[0m
+  runMainIO1
+    [2;31m@[0m ()
+    (main1
+     `cast` (Sym (N[2;31m:[0mIO[[2;35m0[0m] [2;31m<[0m()[2;31m>[0m_R)
+             [2;31m::[0m ((State[2;31m#[0m RealWorld
+                  [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)) [2;31m::[0m [2;31m*[0m)
+                [2;31m~[0mR[2;31m#[0m
+                (IO () [2;31m::[0m [2;31m*[0m)))
+
+[2;34m--[0m[2;34m RHS size: {terms: 1, types: 0, coercions: 3}
+[0m[2;31m:[0mmain [2;31m::[0m IO ()
+[GblId,
+ Arity[2;31m=[0m[2;35m1[0m,
+
+ Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
+         WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
+         Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m0[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mTrue)
+         Tmpl[2;31m=[0m main22
+               `cast` (Sym (N[2;31m:[0mIO[[2;35m0[0m] [2;31m<[0m()[2;31m>[0m_R)
+                       [2;31m::[0m ((State[2;31m#[0m RealWorld
+                            [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)) [2;31m::[0m [2;31m*[0m)
+                          [2;31m~[0mR[2;31m#[0m
+                          (IO () [2;31m::[0m [2;31m*[0m))}]
+[2;31m:[0mmain [2;31m=[0m
+  main22
+  `cast` (Sym (N[2;31m:[0mIO[[2;35m0[0m] [2;31m<[0m()[2;31m>[0m_R)
+          [2;31m::[0m ((State[2;31m#[0m RealWorld
+               [2;31m->[0m ([2;31m#[0m State[2;31m#[0m RealWorld, () [2;31m#[0m)) [2;31m::[0m [2;31m*[0m)
+             [2;31m~[0mR[2;31m#[0m
+             (IO () [2;31m::[0m [2;31m*[0m))
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl __stginit_main[2;31m@[0mmain[2;31m:[0mMain
+__stginit_main[2;31m@[0mmain[2;31m:[0mMain[2;31m:[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mconst
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+ccp9_str[2;31m:[0m
+	[2;31m.[0mbyte	[2;35m109[0m
+	[2;31m.[0mbyte	[2;35m97[0m
+	[2;31m.[0mbyte	[2;35m105[0m
+	[2;31m.[0mbyte	[2;35m110[0m
+	[2;31m.[0mbyte	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mtrModule2_closure
+[2;31m$[0mtrModule2_closure[2;31m:[0m
+	[2;31m.[0mquad	TrNameS_static_info
+	[2;31m.[0mquad	ccp9_str
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mconst
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+ccpd_str[2;31m:[0m
+	[2;31m.[0mbyte	[2;35m77[0m
+	[2;31m.[0mbyte	[2;35m97[0m
+	[2;31m.[0mbyte	[2;35m105[0m
+	[2;31m.[0mbyte	[2;35m110[0m
+	[2;31m.[0mbyte	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mtrModule1_closure
+[2;31m$[0mtrModule1_closure[2;31m:[0m
+	[2;31m.[0mquad	TrNameS_static_info
+	[2;31m.[0mquad	ccpd_str
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mtrModule_closure
+[2;31m$[0mtrModule_closure[2;31m:[0m
+	[2;31m.[0mquad	Module_static_info
+	[2;31m.[0mquad	[2;31m$[0mtrModule2_closure[2;31m+[0m[2;35m1[0m
+	[2;31m.[0mquad	[2;31m$[0mtrModule1_closure[2;31m+[0m[2;35m1[0m
+	[2;31m.[0mquad	[2;35m3[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl myList_closure
+myList_closure[2;31m:[0m
+	[2;31m.[0mquad	myList_info
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m22[0m
+[2;31m.[0mglobl myList_info
+myList_info[2;31m:[0m
+_ccpo[2;31m:[0m
+	leaq [2;31m-[0m[2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccpp
+_ccpq[2;31m:[0m
+	movq [2;31m%[0mr13,[2;31m%[0mrdi
+	movq [2;31m%[0mrbx,[2;31m%[0mrsi
+	subq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	xorl [2;31m%[0meax,[2;31m%[0meax
+	call newCAF
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	testq [2;31m%[0mrax,[2;31m%[0mrax
+	je _ccpn
+_ccpm[2;31m:[0m
+	movq stg_bh_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrbx
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	movl [2;31m$[0m[2;35m10000[0m,[2;31m%[0medi
+	movl [2;31m$[0m[2;35m2[0m,[2;31m%[0mesi
+	movl [2;31m$[0m[2;35m1[0m,[2;31m%[0mr14d
+	addq [2;31m$-[0m[2;35m16[0m,[2;31m%[0mrbp
+	jmp efdtInt_info
+_ccpp[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+_ccpn[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main21_closure
+main21_closure[2;31m:[0m
+	[2;31m.[0mquad	main21_info
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mconst
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+ccpD_str[2;31m:[0m
+	[2;31m.[0mbyte	[2;35m97[0m
+	[2;31m.[0mbyte	[2;35m118[0m
+	[2;31m.[0mbyte	[2;35m103[0m
+	[2;31m.[0mbyte	[2;35m83[0m
+	[2;31m.[0mbyte	[2;35m105[0m
+	[2;31m.[0mbyte	[2;35m109[0m
+	[2;31m.[0mbyte	[2;35m112[0m
+	[2;31m.[0mbyte	[2;35m108[0m
+	[2;31m.[0mbyte	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m22[0m
+[2;31m.[0mglobl main21_info
+main21_info[2;31m:[0m
+_ccpE[2;31m:[0m
+	leaq [2;31m-[0m[2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccpF
+_ccpG[2;31m:[0m
+	movq [2;31m%[0mr13,[2;31m%[0mrdi
+	movq [2;31m%[0mrbx,[2;31m%[0mrsi
+	subq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	xorl [2;31m%[0meax,[2;31m%[0meax
+	call newCAF
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	testq [2;31m%[0mrax,[2;31m%[0mrax
+	je _ccpC
+_ccpB[2;31m:[0m
+	movq stg_bh_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrbx
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	leaq ccpD_str([2;31m%[0mrip),[2;31m%[0mr14
+	addq [2;31m$-[0m[2;35m16[0m,[2;31m%[0mrbp
+	jmp unpackCString[2;31m#[0m_info
+_ccpF[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+_ccpC[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main20_closure
+main20_closure[2;31m:[0m
+	[2;31m.[0mquad	main20_info
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mconst
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+ccpU_str[2;31m:[0m
+	[2;31m.[0mbyte	[2;35m102[0m
+	[2;31m.[0mbyte	[2;35m115[0m
+	[2;31m.[0mbyte	[2;35m117[0m
+	[2;31m.[0mbyte	[2;35m109[0m
+	[2;31m.[0mbyte	[2;35m50[0m
+	[2;31m.[0mbyte	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m22[0m
+[2;31m.[0mglobl main20_info
+main20_info[2;31m:[0m
+_ccpV[2;31m:[0m
+	leaq [2;31m-[0m[2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccpW
+_ccpX[2;31m:[0m
+	movq [2;31m%[0mr13,[2;31m%[0mrdi
+	movq [2;31m%[0mrbx,[2;31m%[0mrsi
+	subq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	xorl [2;31m%[0meax,[2;31m%[0meax
+	call newCAF
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	testq [2;31m%[0mrax,[2;31m%[0mrax
+	je _ccpT
+_ccpS[2;31m:[0m
+	movq stg_bh_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrbx
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	leaq ccpU_str([2;31m%[0mrip),[2;31m%[0mr14
+	addq [2;31m$-[0m[2;35m16[0m,[2;31m%[0mrbp
+	jmp unpackCString[2;31m#[0m_info
+_ccpW[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+_ccpT[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwgo3_closure
+[2;31m$[0mwgo3_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwgo3_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m8589934606[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m15[0m
+[2;31m.[0mglobl [2;31m$[0mwgo3_info
+[2;31m$[0mwgo3_info[2;31m:[0m
+_ccqs[2;31m:[0m
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jae _ccqi
+_ccqt[2;31m:[0m
+	leaq [2;31m$[0mwgo3_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+_ccqq[2;31m:[0m
+	leaq block_ccqA_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	movq [2;35m14[0m([2;31m%[0mrbx),[2;31m%[0mrax
+	movq [2;35m6[0m([2;31m%[0mrbx),[2;31m%[0mrbx
+	movq [2;31m%[0mrax,([2;31m%[0mrbp)
+	addq [2;31m$-[0m[2;35m8[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccqA
+_ccqC[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m65[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccql_info[2;31m:[0m
+_ccql[2;31m:[0m
+	movq [2;31m%[0mrbx,[2;31m%[0mrax
+	andl [2;31m$[0m[2;35m7[0m,[2;31m%[0meax
+	cmpq [2;31m$[0m[2;35m1[0m,[2;31m%[0mrax
+	jne _ccqq
+_ccqp[2;31m:[0m
+	movq [2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrbx
+	addq [2;31m$[0m[2;35m16[0m,[2;31m%[0mrbp
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m130[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccqA_info[2;31m:[0m
+_ccqA[2;31m:[0m
+	leaq [2;35m7[0m([2;31m%[0mrbx),[2;31m%[0mrax
+	movq [2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrbx
+	addq ([2;31m%[0mrax),[2;31m%[0mrbx
+	movq [2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	addq [2;31m$[0m[2;35m24[0m,[2;31m%[0mrbp
+_ncqT[2;31m:[0m
+	movq [2;31m%[0mrbx,[2;31m%[0mrsi
+	movq [2;31m%[0mrax,[2;31m%[0mr14
+_ccqi[2;31m:[0m
+	leaq block_ccql_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mr14,[2;31m%[0mrbx
+	movq [2;31m%[0mrsi,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	addq [2;31m$-[0m[2;35m16[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccql
+_ccqm[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main_eta2_closure
+main_eta2_closure[2;31m:[0m
+	[2;31m.[0mquad	main_eta2_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m4294967301[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m15[0m
+[2;31m.[0mglobl main_eta2_info
+main_eta2_info[2;31m:[0m
+_ccr4[2;31m:[0m
+	leaq [2;31m-[0m[2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccr8
+_ccr9[2;31m:[0m
+	leaq block_ccr2_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	xorl [2;31m%[0mesi,[2;31m%[0mesi
+	addq [2;31m$-[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m$[0mwgo3_info
+_ccrc[2;31m:[0m
+	movq [2;31m$[0m[2;35m16[0m,[2;35m904[0m([2;31m%[0mr13)
+	jmp [2;31m*[0mstg_gc_unbx_r1[2;31m@[0mGOTPCREL([2;31m%[0mrip)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccr2_info[2;31m:[0m
+_ccr2[2;31m:[0m
+	addq [2;31m$[0m[2;35m16[0m,[2;31m%[0mr12
+	cmpq [2;35m856[0m([2;31m%[0mr13),[2;31m%[0mr12
+	ja _ccrc
+_ccrb[2;31m:[0m
+	leaq I[2;31m#[0m_con_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mr12)
+	movq [2;31m%[0mrbx,([2;31m%[0mr12)
+	leaq [2;31m-[0m[2;35m7[0m([2;31m%[0mr12),[2;31m%[0mrbx
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+_ccr8[2;31m:[0m
+	leaq main_eta2_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwgo4_closure
+[2;31m$[0mwgo4_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwgo4_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m2[0m
+	[2;31m.[0mquad	[2;35m19[0m
+sat_scnS_info[2;31m:[0m
+_ccrQ[2;31m:[0m
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccrR
+_ccrS[2;31m:[0m
+	movq stg_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	leaq block_ccrO_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m24[0m([2;31m%[0mrbp)
+	movq [2;35m24[0m([2;31m%[0mrbx),[2;31m%[0mr14
+	movq [2;35m16[0m([2;31m%[0mrbx),[2;31m%[0mrbx
+	addq [2;31m$-[0m[2;35m24[0m,[2;31m%[0mrbp
+	jmp stg_ap_p_fast
+_ccrR[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccrO_info[2;31m:[0m
+_ccrO[2;31m:[0m
+	leaq ()_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mrbx
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m17179869206[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m15[0m
+[2;31m.[0mglobl [2;31m$[0mwgo4_info
+[2;31m$[0mwgo4_info[2;31m:[0m
+_ccrW[2;31m:[0m
+	leaq [2;31m-[0m[2;35m32[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccrX
+_ccrC[2;31m:[0m
+	addq [2;31m$[0m[2;35m32[0m,[2;31m%[0mr12
+	cmpq [2;35m856[0m([2;31m%[0mr13),[2;31m%[0mr12
+	ja _ccs0
+_ccrZ[2;31m:[0m
+	testq [2;31m%[0mrdi,[2;31m%[0mrdi
+	jle _ccs7
+_ccs3[2;31m:[0m
+	leaq sat_scnS_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m24[0m([2;31m%[0mr12)
+	movq [2;31m%[0mr14,[2;31m-[0m[2;35m8[0m([2;31m%[0mr12)
+	movq [2;31m%[0mrsi,([2;31m%[0mr12)
+	leaq block_ccs1_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m32[0m([2;31m%[0mrbp)
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mr12),[2;31m%[0mrbx
+	movq [2;31m%[0mr14,[2;31m-[0m[2;35m24[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrsi,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrdi,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	addq [2;31m$-[0m[2;35m32[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccs1
+_ccs4[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+_ccs7[2;31m:[0m
+	addq [2;31m$-[0m[2;35m32[0m,[2;31m%[0mr12
+	leaq ()_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m259[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccs1_info[2;31m:[0m
+_ccs1[2;31m:[0m
+	movq [2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	movq [2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrcx
+	movq [2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrdx
+	decq [2;31m%[0mrdx
+	addq [2;31m$[0m[2;35m32[0m,[2;31m%[0mrbp
+_ncsm[2;31m:[0m
+	movq [2;31m%[0mrdx,[2;31m%[0mrdi
+	movq [2;31m%[0mrcx,[2;31m%[0mrsi
+	movq [2;31m%[0mrax,[2;31m%[0mr14
+	jmp _ccrC
+_ccs0[2;31m:[0m
+	movq [2;31m$[0m[2;35m32[0m,[2;35m904[0m([2;31m%[0mr13)
+_ccrX[2;31m:[0m
+	leaq [2;31m$[0mwgo4_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwmain3_closure
+[2;31m$[0mwmain3_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwmain3_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m([2;31m$[0mwmain3_info)[2;31m+[0m[2;35m0[0m
+	[2;31m.[0mquad	[2;35m8589934596[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967311[0m
+[2;31m.[0mglobl [2;31m$[0mwmain3_info
+[2;31m$[0mwmain3_info[2;31m:[0m
+_ccss[2;31m:[0m
+	movq [2;31m%[0mr14,[2;31m%[0mrdi
+	leaq myList_closure([2;31m%[0mrip),[2;31m%[0mrsi
+	leaq main_eta2_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mr14
+	jmp [2;31m$[0mwgo4_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main19_closure
+main19_closure[2;31m:[0m
+	[2;31m.[0mquad	main19_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(main19_info)[2;31m+[0m[2;35m8[0m
+	[2;31m.[0mquad	[2;35m8589934597[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m12884901903[0m
+[2;31m.[0mglobl main19_info
+main19_info[2;31m:[0m
+_ccsK[2;31m:[0m
+	leaq [2;31m-[0m[2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccsL
+_ccsM[2;31m:[0m
+	leaq block_ccsH_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mr14,[2;31m%[0mrbx
+	addq [2;31m$-[0m[2;35m8[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccsH
+_ccsI[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+_ccsL[2;31m:[0m
+	leaq main19_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(block_ccsH_info)[2;31m+[0m[2;35m8[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967328[0m
+block_ccsH_info[2;31m:[0m
+_ccsH[2;31m:[0m
+	movq [2;35m7[0m([2;31m%[0mrbx),[2;31m%[0mr14
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m$[0mwmain3_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main18_closure
+main18_closure[2;31m:[0m
+	[2;31m.[0mquad	Criterion.Types.Benchmark_static_info
+	[2;31m.[0mquad	main20_closure
+	[2;31m.[0mquad	main19_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main17_closure
+main17_closure[2;31m:[0m
+	[2;31m.[0mquad	main17_info
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mconst
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+cct4_str[2;31m:[0m
+	[2;31m.[0mbyte	[2;35m102[0m
+	[2;31m.[0mbyte	[2;35m115[0m
+	[2;31m.[0mbyte	[2;35m117[0m
+	[2;31m.[0mbyte	[2;35m109[0m
+	[2;31m.[0mbyte	[2;35m49[0m
+	[2;31m.[0mbyte	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m22[0m
+[2;31m.[0mglobl main17_info
+main17_info[2;31m:[0m
+_cct5[2;31m:[0m
+	leaq [2;31m-[0m[2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _cct6
+_cct7[2;31m:[0m
+	movq [2;31m%[0mr13,[2;31m%[0mrdi
+	movq [2;31m%[0mrbx,[2;31m%[0mrsi
+	subq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	xorl [2;31m%[0meax,[2;31m%[0meax
+	call newCAF
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	testq [2;31m%[0mrax,[2;31m%[0mrax
+	je _cct3
+_cct2[2;31m:[0m
+	movq stg_bh_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrbx
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	leaq cct4_str([2;31m%[0mrip),[2;31m%[0mr14
+	addq [2;31m$-[0m[2;35m16[0m,[2;31m%[0mrbp
+	jmp unpackCString[2;31m#[0m_info
+_cct6[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+_cct3[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main10_closure
+main10_closure[2;31m:[0m
+	[2;31m.[0mquad	I[2;31m#[0m_static_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main_eta_closure
+main_eta_closure[2;31m:[0m
+	[2;31m.[0mquad	main_eta_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m4294967301[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m15[0m
+[2;31m.[0mglobl main_eta_info
+main_eta_info[2;31m:[0m
+_cctl[2;31m:[0m
+	movq [2;31m%[0mr14,[2;31m%[0mrdi
+	leaq main10_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mrsi
+	leaq [2;31m$[0mfNumInt_[2;31m$[0mc[2;31m+[0m_closure[2;31m+[0m[2;35m2[0m([2;31m%[0mrip),[2;31m%[0mr14
+	jmp foldl_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwgo2_closure
+[2;31m$[0mwgo2_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwgo2_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m2[0m
+	[2;31m.[0mquad	[2;35m19[0m
+sat_scob_info[2;31m:[0m
+_cctY[2;31m:[0m
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _cctZ
+_ccu0[2;31m:[0m
+	movq stg_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	leaq block_cctW_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m24[0m([2;31m%[0mrbp)
+	movq [2;35m24[0m([2;31m%[0mrbx),[2;31m%[0mr14
+	movq [2;35m16[0m([2;31m%[0mrbx),[2;31m%[0mrbx
+	addq [2;31m$-[0m[2;35m24[0m,[2;31m%[0mrbp
+	jmp stg_ap_p_fast
+_cctZ[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_cctW_info[2;31m:[0m
+_cctW[2;31m:[0m
+	leaq ()_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mrbx
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m17179869206[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m15[0m
+[2;31m.[0mglobl [2;31m$[0mwgo2_info
+[2;31m$[0mwgo2_info[2;31m:[0m
+_ccu4[2;31m:[0m
+	leaq [2;31m-[0m[2;35m32[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccu5
+_cctK[2;31m:[0m
+	addq [2;31m$[0m[2;35m32[0m,[2;31m%[0mr12
+	cmpq [2;35m856[0m([2;31m%[0mr13),[2;31m%[0mr12
+	ja _ccu8
+_ccu7[2;31m:[0m
+	testq [2;31m%[0mrdi,[2;31m%[0mrdi
+	jle _ccuf
+_ccub[2;31m:[0m
+	leaq sat_scob_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m24[0m([2;31m%[0mr12)
+	movq [2;31m%[0mr14,[2;31m-[0m[2;35m8[0m([2;31m%[0mr12)
+	movq [2;31m%[0mrsi,([2;31m%[0mr12)
+	leaq block_ccu9_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m32[0m([2;31m%[0mrbp)
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mr12),[2;31m%[0mrbx
+	movq [2;31m%[0mr14,[2;31m-[0m[2;35m24[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrsi,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrdi,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	addq [2;31m$-[0m[2;35m32[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccu9
+_ccuc[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+_ccuf[2;31m:[0m
+	addq [2;31m$-[0m[2;35m32[0m,[2;31m%[0mr12
+	leaq ()_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m259[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccu9_info[2;31m:[0m
+_ccu9[2;31m:[0m
+	movq [2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	movq [2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrcx
+	movq [2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrdx
+	decq [2;31m%[0mrdx
+	addq [2;31m$[0m[2;35m32[0m,[2;31m%[0mrbp
+_ncuu[2;31m:[0m
+	movq [2;31m%[0mrdx,[2;31m%[0mrdi
+	movq [2;31m%[0mrcx,[2;31m%[0mrsi
+	movq [2;31m%[0mrax,[2;31m%[0mr14
+	jmp _cctK
+_ccu8[2;31m:[0m
+	movq [2;31m$[0m[2;35m32[0m,[2;35m904[0m([2;31m%[0mr13)
+_ccu5[2;31m:[0m
+	leaq [2;31m$[0mwgo2_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwmain2_closure
+[2;31m$[0mwmain2_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwmain2_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m([2;31m$[0mwmain2_info)[2;31m+[0m[2;35m0[0m
+	[2;31m.[0mquad	[2;35m8589934596[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967311[0m
+[2;31m.[0mglobl [2;31m$[0mwmain2_info
+[2;31m$[0mwmain2_info[2;31m:[0m
+_ccuA[2;31m:[0m
+	movq [2;31m%[0mr14,[2;31m%[0mrdi
+	leaq myList_closure([2;31m%[0mrip),[2;31m%[0mrsi
+	leaq main_eta_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mr14
+	jmp [2;31m$[0mwgo2_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main16_closure
+main16_closure[2;31m:[0m
+	[2;31m.[0mquad	main16_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(main16_info)[2;31m+[0m[2;35m24[0m
+	[2;31m.[0mquad	[2;35m8589934597[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m12884901903[0m
+[2;31m.[0mglobl main16_info
+main16_info[2;31m:[0m
+_ccuR[2;31m:[0m
+	leaq [2;31m-[0m[2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccuS
+_ccuT[2;31m:[0m
+	leaq block_ccuO_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mr14,[2;31m%[0mrbx
+	addq [2;31m$-[0m[2;35m8[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccuO
+_ccuP[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+_ccuS[2;31m:[0m
+	leaq main16_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(block_ccuO_info)[2;31m+[0m[2;35m24[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967328[0m
+block_ccuO_info[2;31m:[0m
+_ccuO[2;31m:[0m
+	movq [2;35m7[0m([2;31m%[0mrbx),[2;31m%[0mr14
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m$[0mwmain2_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main15_closure
+main15_closure[2;31m:[0m
+	[2;31m.[0mquad	Criterion.Types.Benchmark_static_info
+	[2;31m.[0mquad	main17_closure
+	[2;31m.[0mquad	main16_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main14_closure
+main14_closure[2;31m:[0m
+	[2;31m.[0mquad	main14_info
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mconst
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+ccvb_str[2;31m:[0m
+	[2;31m.[0mbyte	[2;35m112[0m
+	[2;31m.[0mbyte	[2;35m115[0m
+	[2;31m.[0mbyte	[2;35m117[0m
+	[2;31m.[0mbyte	[2;35m109[0m
+	[2;31m.[0mbyte	[2;35m50[0m
+	[2;31m.[0mbyte	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m22[0m
+[2;31m.[0mglobl main14_info
+main14_info[2;31m:[0m
+_ccvc[2;31m:[0m
+	leaq [2;31m-[0m[2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccvd
+_ccve[2;31m:[0m
+	movq [2;31m%[0mr13,[2;31m%[0mrdi
+	movq [2;31m%[0mrbx,[2;31m%[0mrsi
+	subq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	xorl [2;31m%[0meax,[2;31m%[0meax
+	call newCAF
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	testq [2;31m%[0mrax,[2;31m%[0mrax
+	je _ccva
+_ccv9[2;31m:[0m
+	movq stg_bh_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrbx
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	leaq ccvb_str([2;31m%[0mrip),[2;31m%[0mr14
+	addq [2;31m$-[0m[2;35m16[0m,[2;31m%[0mrbp
+	jmp unpackCString[2;31m#[0m_info
+_ccvd[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+_ccva[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwgo_closure
+[2;31m$[0mwgo_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwgo_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m8589934606[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m15[0m
+[2;31m.[0mglobl [2;31m$[0mwgo_info
+[2;31m$[0mwgo_info[2;31m:[0m
+_ccvJ[2;31m:[0m
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jae _ccvz
+_ccvK[2;31m:[0m
+	leaq [2;31m$[0mwgo_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+_ccvH[2;31m:[0m
+	leaq block_ccvR_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	movq [2;35m14[0m([2;31m%[0mrbx),[2;31m%[0mrax
+	movq [2;35m6[0m([2;31m%[0mrbx),[2;31m%[0mrbx
+	movq [2;31m%[0mrax,([2;31m%[0mrbp)
+	addq [2;31m$-[0m[2;35m8[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccvR
+_ccvT[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m65[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccvC_info[2;31m:[0m
+_ccvC[2;31m:[0m
+	movq [2;31m%[0mrbx,[2;31m%[0mrax
+	andl [2;31m$[0m[2;35m7[0m,[2;31m%[0meax
+	cmpq [2;31m$[0m[2;35m1[0m,[2;31m%[0mrax
+	jne _ccvH
+_ccvG[2;31m:[0m
+	movq [2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrbx
+	addq [2;31m$[0m[2;35m16[0m,[2;31m%[0mrbp
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m130[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccvR_info[2;31m:[0m
+_ccvR[2;31m:[0m
+	leaq [2;35m7[0m([2;31m%[0mrbx),[2;31m%[0mrax
+	movq [2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrbx
+	addq ([2;31m%[0mrax),[2;31m%[0mrbx
+	movq [2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	addq [2;31m$[0m[2;35m24[0m,[2;31m%[0mrbp
+_ncwa[2;31m:[0m
+	movq [2;31m%[0mrbx,[2;31m%[0mrsi
+	movq [2;31m%[0mrax,[2;31m%[0mr14
+_ccvz[2;31m:[0m
+	leaq block_ccvC_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mr14,[2;31m%[0mrbx
+	movq [2;31m%[0mrsi,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	addq [2;31m$-[0m[2;35m16[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccvC
+_ccvD[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main_eta1_closure
+main_eta1_closure[2;31m:[0m
+	[2;31m.[0mquad	main_eta1_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m4294967301[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m15[0m
+[2;31m.[0mglobl main_eta1_info
+main_eta1_info[2;31m:[0m
+_ccwl[2;31m:[0m
+	leaq [2;31m-[0m[2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccwp
+_ccwq[2;31m:[0m
+	leaq block_ccwj_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	xorl [2;31m%[0mesi,[2;31m%[0mesi
+	addq [2;31m$-[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m$[0mwgo_info
+_ccwt[2;31m:[0m
+	movq [2;31m$[0m[2;35m16[0m,[2;35m904[0m([2;31m%[0mr13)
+	jmp [2;31m*[0mstg_gc_unbx_r1[2;31m@[0mGOTPCREL([2;31m%[0mrip)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccwj_info[2;31m:[0m
+_ccwj[2;31m:[0m
+	addq [2;31m$[0m[2;35m16[0m,[2;31m%[0mr12
+	cmpq [2;35m856[0m([2;31m%[0mr13),[2;31m%[0mr12
+	ja _ccwt
+_ccws[2;31m:[0m
+	leaq I[2;31m#[0m_con_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mr12)
+	movq [2;31m%[0mrbx,([2;31m%[0mr12)
+	leaq [2;31m-[0m[2;35m7[0m([2;31m%[0mr12),[2;31m%[0mrbx
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+_ccwp[2;31m:[0m
+	leaq main_eta1_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwgo1_closure
+[2;31m$[0mwgo1_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwgo1_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m2[0m
+	[2;31m.[0mquad	[2;35m19[0m
+sat_scoE_info[2;31m:[0m
+_ccx7[2;31m:[0m
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccx8
+_ccx9[2;31m:[0m
+	movq stg_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	leaq block_ccx5_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m24[0m([2;31m%[0mrbp)
+	movq [2;35m24[0m([2;31m%[0mrbx),[2;31m%[0mr14
+	movq [2;35m16[0m([2;31m%[0mrbx),[2;31m%[0mrbx
+	addq [2;31m$-[0m[2;35m24[0m,[2;31m%[0mrbp
+	jmp stg_ap_p_fast
+_ccx8[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccx5_info[2;31m:[0m
+_ccx5[2;31m:[0m
+	leaq ()_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mrbx
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m17179869206[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m15[0m
+[2;31m.[0mglobl [2;31m$[0mwgo1_info
+[2;31m$[0mwgo1_info[2;31m:[0m
+_ccxd[2;31m:[0m
+	leaq [2;31m-[0m[2;35m32[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccxe
+_ccwT[2;31m:[0m
+	addq [2;31m$[0m[2;35m32[0m,[2;31m%[0mr12
+	cmpq [2;35m856[0m([2;31m%[0mr13),[2;31m%[0mr12
+	ja _ccxh
+_ccxg[2;31m:[0m
+	testq [2;31m%[0mrdi,[2;31m%[0mrdi
+	jle _ccxo
+_ccxk[2;31m:[0m
+	leaq sat_scoE_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m24[0m([2;31m%[0mr12)
+	movq [2;31m%[0mr14,[2;31m-[0m[2;35m8[0m([2;31m%[0mr12)
+	movq [2;31m%[0mrsi,([2;31m%[0mr12)
+	leaq block_ccxi_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m32[0m([2;31m%[0mrbp)
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mr12),[2;31m%[0mrbx
+	movq [2;31m%[0mr14,[2;31m-[0m[2;35m24[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrsi,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrdi,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	addq [2;31m$-[0m[2;35m32[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccxi
+_ccxl[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+_ccxo[2;31m:[0m
+	addq [2;31m$-[0m[2;35m32[0m,[2;31m%[0mr12
+	leaq ()_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m259[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccxi_info[2;31m:[0m
+_ccxi[2;31m:[0m
+	movq [2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	movq [2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrcx
+	movq [2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrdx
+	decq [2;31m%[0mrdx
+	addq [2;31m$[0m[2;35m32[0m,[2;31m%[0mrbp
+_ncxD[2;31m:[0m
+	movq [2;31m%[0mrdx,[2;31m%[0mrdi
+	movq [2;31m%[0mrcx,[2;31m%[0mrsi
+	movq [2;31m%[0mrax,[2;31m%[0mr14
+	jmp _ccwT
+_ccxh[2;31m:[0m
+	movq [2;31m$[0m[2;35m32[0m,[2;35m904[0m([2;31m%[0mr13)
+_ccxe[2;31m:[0m
+	leaq [2;31m$[0mwgo1_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwmain1_closure
+[2;31m$[0mwmain1_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwmain1_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m([2;31m$[0mwmain1_info)[2;31m+[0m[2;35m0[0m
+	[2;31m.[0mquad	[2;35m8589934596[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967311[0m
+[2;31m.[0mglobl [2;31m$[0mwmain1_info
+[2;31m$[0mwmain1_info[2;31m:[0m
+_ccxJ[2;31m:[0m
+	movq [2;31m%[0mr14,[2;31m%[0mrdi
+	leaq myList_closure([2;31m%[0mrip),[2;31m%[0mrsi
+	leaq main_eta1_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mr14
+	jmp [2;31m$[0mwgo1_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main13_closure
+main13_closure[2;31m:[0m
+	[2;31m.[0mquad	main13_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(main13_info)[2;31m+[0m[2;35m40[0m
+	[2;31m.[0mquad	[2;35m8589934597[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m12884901903[0m
+[2;31m.[0mglobl main13_info
+main13_info[2;31m:[0m
+_ccy0[2;31m:[0m
+	leaq [2;31m-[0m[2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccy1
+_ccy2[2;31m:[0m
+	leaq block_ccxX_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mr14,[2;31m%[0mrbx
+	addq [2;31m$-[0m[2;35m8[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _ccxX
+_ccxY[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+_ccy1[2;31m:[0m
+	leaq main13_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(block_ccxX_info)[2;31m+[0m[2;35m40[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967328[0m
+block_ccxX_info[2;31m:[0m
+_ccxX[2;31m:[0m
+	movq [2;35m7[0m([2;31m%[0mrbx),[2;31m%[0mr14
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m$[0mwmain1_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main12_closure
+main12_closure[2;31m:[0m
+	[2;31m.[0mquad	Criterion.Types.Benchmark_static_info
+	[2;31m.[0mquad	main14_closure
+	[2;31m.[0mquad	main13_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main11_closure
+main11_closure[2;31m:[0m
+	[2;31m.[0mquad	main11_info
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mconst
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+ccyk_str[2;31m:[0m
+	[2;31m.[0mbyte	[2;35m80[0m
+	[2;31m.[0mbyte	[2;35m46[0m
+	[2;31m.[0mbyte	[2;35m115[0m
+	[2;31m.[0mbyte	[2;35m117[0m
+	[2;31m.[0mbyte	[2;35m109[0m
+	[2;31m.[0mbyte	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m22[0m
+[2;31m.[0mglobl main11_info
+main11_info[2;31m:[0m
+_ccyl[2;31m:[0m
+	leaq [2;31m-[0m[2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccym
+_ccyn[2;31m:[0m
+	movq [2;31m%[0mr13,[2;31m%[0mrdi
+	movq [2;31m%[0mrbx,[2;31m%[0mrsi
+	subq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	xorl [2;31m%[0meax,[2;31m%[0meax
+	call newCAF
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrsp
+	testq [2;31m%[0mrax,[2;31m%[0mrax
+	je _ccyj
+_ccyi[2;31m:[0m
+	movq stg_bh_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrbx
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	leaq ccyk_str([2;31m%[0mrip),[2;31m%[0mr14
+	addq [2;31m$-[0m[2;35m16[0m,[2;31m%[0mrbp
+	jmp unpackCString[2;31m#[0m_info
+_ccym[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+_ccyj[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwgo12_closure
+[2;31m$[0mwgo12_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwgo12_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m2[0m
+	[2;31m.[0mquad	[2;35m19[0m
+sat_scoX_info[2;31m:[0m
+_ccz1[2;31m:[0m
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccz2
+_ccz3[2;31m:[0m
+	movq stg_upd_frame_info[2;31m@[0mGOTPCREL([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrbx,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	leaq block_ccyZ_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m24[0m([2;31m%[0mrbp)
+	movq [2;35m24[0m([2;31m%[0mrbx),[2;31m%[0mr14
+	movq [2;35m16[0m([2;31m%[0mrbx),[2;31m%[0mrbx
+	addq [2;31m$-[0m[2;35m24[0m,[2;31m%[0mrbp
+	jmp stg_ap_p_fast
+_ccz2[2;31m:[0m
+	jmp [2;31m*-[0m[2;35m16[0m([2;31m%[0mr13)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_ccyZ_info[2;31m:[0m
+_ccyZ[2;31m:[0m
+	leaq ()_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mrbx
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m17179869206[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m15[0m
+[2;31m.[0mglobl [2;31m$[0mwgo12_info
+[2;31m$[0mwgo12_info[2;31m:[0m
+_ccz7[2;31m:[0m
+	leaq [2;31m-[0m[2;35m32[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _ccz8
+_ccyN[2;31m:[0m
+	addq [2;31m$[0m[2;35m32[0m,[2;31m%[0mr12
+	cmpq [2;35m856[0m([2;31m%[0mr13),[2;31m%[0mr12
+	ja _cczb
+_ccza[2;31m:[0m
+	testq [2;31m%[0mrdi,[2;31m%[0mrdi
+	jle _cczi
+_ccze[2;31m:[0m
+	leaq sat_scoX_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m24[0m([2;31m%[0mr12)
+	movq [2;31m%[0mr14,[2;31m-[0m[2;35m8[0m([2;31m%[0mr12)
+	movq [2;31m%[0mrsi,([2;31m%[0mr12)
+	leaq block_cczc_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m32[0m([2;31m%[0mrbp)
+	leaq [2;31m-[0m[2;35m24[0m([2;31m%[0mr12),[2;31m%[0mrbx
+	movq [2;31m%[0mr14,[2;31m-[0m[2;35m24[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrsi,[2;31m-[0m[2;35m16[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mrdi,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	addq [2;31m$-[0m[2;35m32[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _cczc
+_cczf[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+_cczi[2;31m:[0m
+	addq [2;31m$-[0m[2;35m32[0m,[2;31m%[0mr12
+	leaq ()_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*[0m([2;31m%[0mrbp)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	[2;35m259[0m
+	[2;31m.[0mquad	[2;35m32[0m
+block_cczc_info[2;31m:[0m
+_cczc[2;31m:[0m
+	movq [2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	movq [2;35m16[0m([2;31m%[0mrbp),[2;31m%[0mrcx
+	movq [2;35m24[0m([2;31m%[0mrbp),[2;31m%[0mrdx
+	decq [2;31m%[0mrdx
+	addq [2;31m$[0m[2;35m32[0m,[2;31m%[0mrbp
+_nczx[2;31m:[0m
+	movq [2;31m%[0mrdx,[2;31m%[0mrdi
+	movq [2;31m%[0mrcx,[2;31m%[0mrsi
+	movq [2;31m%[0mrax,[2;31m%[0mr14
+	jmp _ccyN
+_cczb[2;31m:[0m
+	movq [2;31m$[0m[2;35m32[0m,[2;35m904[0m([2;31m%[0mr13)
+_ccz8[2;31m:[0m
+	leaq [2;31m$[0mwgo12_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m$[0mwmain_closure
+[2;31m$[0mwmain_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m$[0mwmain_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m([2;31m$[0mwmain_info)[2;31m+[0m[2;35m0[0m
+	[2;31m.[0mquad	[2;35m8589934596[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967311[0m
+[2;31m.[0mglobl [2;31m$[0mwmain_info
+[2;31m$[0mwmain_info[2;31m:[0m
+_cczD[2;31m:[0m
+	movq [2;31m%[0mr14,[2;31m%[0mrdi
+	leaq myList_closure([2;31m%[0mrip),[2;31m%[0mrsi
+	leaq main_eta_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mr14
+	jmp [2;31m$[0mwgo12_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main9_closure
+main9_closure[2;31m:[0m
+	[2;31m.[0mquad	main9_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(main9_info)[2;31m+[0m[2;35m56[0m
+	[2;31m.[0mquad	[2;35m8589934597[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m12884901903[0m
+[2;31m.[0mglobl main9_info
+main9_info[2;31m:[0m
+_cczU[2;31m:[0m
+	leaq [2;31m-[0m[2;35m8[0m([2;31m%[0mrbp),[2;31m%[0mrax
+	cmpq [2;31m%[0mr15,[2;31m%[0mrax
+	jb _cczV
+_cczW[2;31m:[0m
+	leaq block_cczR_info([2;31m%[0mrip),[2;31m%[0mrax
+	movq [2;31m%[0mrax,[2;31m-[0m[2;35m8[0m([2;31m%[0mrbp)
+	movq [2;31m%[0mr14,[2;31m%[0mrbx
+	addq [2;31m$-[0m[2;35m8[0m,[2;31m%[0mrbp
+	testb [2;31m$[0m[2;35m7[0m,[2;31m%[0mbl
+	jne _cczR
+_cczS[2;31m:[0m
+	jmp [2;31m*[0m([2;31m%[0mrbx)
+_cczV[2;31m:[0m
+	leaq main9_closure([2;31m%[0mrip),[2;31m%[0mrbx
+	jmp [2;31m*-[0m[2;35m8[0m([2;31m%[0mr13)
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(block_cczR_info)[2;31m+[0m[2;35m56[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967328[0m
+block_cczR_info[2;31m:[0m
+_cczR[2;31m:[0m
+	movq [2;35m7[0m([2;31m%[0mrbx),[2;31m%[0mr14
+	addq [2;31m$[0m[2;35m8[0m,[2;31m%[0mrbp
+	jmp [2;31m$[0mwmain_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main8_closure
+main8_closure[2;31m:[0m
+	[2;31m.[0mquad	Criterion.Types.Benchmark_static_info
+	[2;31m.[0mquad	main11_closure
+	[2;31m.[0mquad	main9_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main7_closure
+main7_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m:[0m_static_info
+	[2;31m.[0mquad	main8_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	[]_closure[2;31m+[0m[2;35m1[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main6_closure
+main6_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m:[0m_static_info
+	[2;31m.[0mquad	main12_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	main7_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main5_closure
+main5_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m:[0m_static_info
+	[2;31m.[0mquad	main15_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	main6_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main4_closure
+main4_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m:[0m_static_info
+	[2;31m.[0mquad	main18_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	main5_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main3_closure
+main3_closure[2;31m:[0m
+	[2;31m.[0mquad	Criterion.Types.BenchGroup_static_info
+	[2;31m.[0mquad	main21_closure
+	[2;31m.[0mquad	main4_closure[2;31m+[0m[2;35m2[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main2_closure
+main2_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m:[0m_static_info
+	[2;31m.[0mquad	main3_closure[2;31m+[0m[2;35m3[0m
+	[2;31m.[0mquad	[]_closure[2;31m+[0m[2;35m1[0m
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main1_closure
+main1_closure[2;31m:[0m
+	[2;31m.[0mquad	main1_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(main1_info)[2;31m+[0m[2;35m72[0m
+	[2;31m.[0mquad	[2;35m4294967299[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m30064771087[0m
+[2;31m.[0mglobl main1_info
+main1_info[2;31m:[0m
+_ccAo[2;31m:[0m
+	leaq main2_closure[2;31m+[0m[2;35m2[0m([2;31m%[0mrip),[2;31m%[0mrsi
+	leaq Criterion.Options.defaultConfig_closure([2;31m%[0mrip),[2;31m%[0mr14
+	jmp Criterion.defaultMain2_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main_closure
+main_closure[2;31m:[0m
+	[2;31m.[0mquad	main_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(main_info)[2;31m+[0m[2;35m96[0m
+	[2;31m.[0mquad	[2;35m4294967299[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967311[0m
+[2;31m.[0mglobl main_info
+main_info[2;31m:[0m
+_ccAz[2;31m:[0m
+	jmp main1_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl main22_closure
+main22_closure[2;31m:[0m
+	[2;31m.[0mquad	main22_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m(main22_info)[2;31m+[0m[2;35m96[0m
+	[2;31m.[0mquad	[2;35m4294967299[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m12884901903[0m
+[2;31m.[0mglobl main22_info
+main22_info[2;31m:[0m
+_ccAK[2;31m:[0m
+	leaq main1_closure[2;31m+[0m[2;35m1[0m([2;31m%[0mrip),[2;31m%[0mr14
+	jmp runMainIO1_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0m[2;32mdata[0m
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+[2;31m.[0mglobl [2;31m:[0mmain_closure
+[2;31m:[0mmain_closure[2;31m:[0m
+	[2;31m.[0mquad	[2;31m:[0mmain_info
+	[2;31m.[0mquad	[2;35m0[0m
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mtext
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m3[0m
+	[2;31m.[0mquad	Scsv_srt[2;31m-[0m([2;31m:[0mmain_info)[2;31m+[0m[2;35m112[0m
+	[2;31m.[0mquad	[2;35m4294967299[0m
+	[2;31m.[0mquad	[2;35m0[0m
+	[2;31m.[0mquad	[2;35m4294967311[0m
+[2;31m.[0mglobl [2;31m:[0mmain_info
+[2;31m:[0mmain_info[2;31m:[0m
+_ccAV[2;31m:[0m
+	jmp main22_info
+
+[2;31m====================[0m Asm code [2;31m====================[0m
+[2;31m.[0mconst_data
+[2;31m.[0malign [2;35m3[0m
+[2;31m.[0malign [2;35m0[0m
+Scsv_srt[2;31m:[0m
+	[2;31m.[0mquad	myList_closure
+	[2;31m.[0mquad	[2;31m$[0mwmain3_closure
+	[2;31m.[0mquad	main19_closure
+	[2;31m.[0mquad	[2;31m$[0mwmain2_closure
+	[2;31m.[0mquad	main16_closure
+	[2;31m.[0mquad	[2;31m$[0mwmain1_closure
+	[2;31m.[0mquad	main13_closure
+	[2;31m.[0mquad	[2;31m$[0mwmain_closure
+	[2;31m.[0mquad	main9_closure
+	[2;31m.[0mquad	Criterion.defaultMain2_closure
+	[2;31m.[0mquad	Criterion.Options.defaultConfig_closure
+	[2;31m.[0mquad	main2_closure
+	[2;31m.[0mquad	main1_closure
+	[2;31m.[0mquad	runMainIO1_closure
+	[2;31m.[0mquad	main22_closure
+
+Linking BenchSum [2;31m...[0m
+
