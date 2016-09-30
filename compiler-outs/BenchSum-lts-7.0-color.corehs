@@ -75,12 +75,12 @@ main19 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"fsum2"[0m[2;31m#[0m
   [2;31m::[0m [Int] [2;31m->[0m Int[2;31m#[0m [2;31m->[0m Int[2;31m#[0m
 
 [2;31m$[0mwgo3 [2;31m=[0m
-  [2;31m\[0m (w_scip [2;31m::[0m [Int]) (ww_scit [2;31m::[0m Int[2;31m#[0m) [2;31m->[0m
-    [2;32mcase[0m w_scip [2;32mof[0m _ [Occ[2;31m=[0mDead] {
-      [] [2;31m->[0m ww_scit;
-      [2;31m:[0m y_abcp ys_abcq [2;31m->[0m
-        [2;32mcase[0m y_abcp [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m y1_abbU [2;31m->[0m
-        [2;31m$[0mwgo3 ys_abcq ([2;31m+#[0m ww_scit y1_abbU)
+  [2;31m\[0m (w_schQ [2;31m::[0m [Int]) (ww_schU [2;31m::[0m Int[2;31m#[0m) [2;31m->[0m
+    [2;32mcase[0m w_schQ [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+      [] [2;31m->[0m ww_schU;
+      [2;31m:[0m y_abbQ ys_abbR [2;31m->[0m
+        [2;32mcase[0m y_abbQ [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m y1_abbl [2;31m->[0m
+        [2;31m$[0mwgo3 ys_abbR ([2;31m+#[0m ww_schU y1_abbl)
         }
     }
 
@@ -92,14 +92,14 @@ main19 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"fsum2"[0m[2;31m#[0m
  Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m1[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
-         Tmpl[2;31m=[0m [2;31m\[0m (w_sciz [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
-                 [2;32mcase[0m [2;31m$[0mwgo3 w_sciz [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_sciC { __DEFAULT [2;31m->[0m
-                 I[2;31m#[0m ww_sciC
+         Tmpl[2;31m=[0m [2;31m\[0m (w_sci0 [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
+                 [2;32mcase[0m [2;31m$[0mwgo3 w_sci0 [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_sci3 { __DEFAULT [2;31m->[0m
+                 I[2;31m#[0m ww_sci3
                  }}]
 main_eta1 [2;31m=[0m
-  [2;31m\[0m (w_sciz [2;31m::[0m [Int]) [2;31m->[0m
-    [2;32mcase[0m [2;31m$[0mwgo3 w_sciz [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_sciC { __DEFAULT [2;31m->[0m
-    I[2;31m#[0m ww_sciC
+  [2;31m\[0m (w_sci0 [2;31m::[0m [Int]) [2;31m->[0m
+    [2;32mcase[0m [2;31m$[0mwgo3 w_sci0 [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_sci3 { __DEFAULT [2;31m->[0m
+    I[2;31m#[0m ww_sci3
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 30, types: 28, coercions: 0}
@@ -113,24 +113,24 @@ main_eta1 [2;31m=[0m
  Arity[2;31m=[0m[2;35m4[0m,
 
 [2;31m$[0mwgo4 [2;31m=[0m
-  [2;31m\[0m (w_sciE [2;31m::[0m [Int] [2;31m->[0m Int)
-    (w1_sciF [2;31m::[0m [Int])
-    (ww_sciK [2;31m::[0m Int[2;31m#[0m)
-    (w2_sciH [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_sciK [2;35m0[0m[2;31m#[0m)
+  [2;31m\[0m (w_sci5 [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_sci6 [2;31m::[0m [Int])
+    (ww_scib [2;31m::[0m Int[2;31m#[0m)
+    (w2_sci8 [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_scib [2;35m0[0m[2;31m#[0m)
     [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       False [2;31m->[0m
         [2;32mcase[0m seq[2;31m#[0m
                [2;31m@[0m ()
                [2;31m@[0m RealWorld
-               ([2;32mcase[0m w_sciE w1_sciF [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abdn [2;31m->[0m
+               ([2;32mcase[0m w_sci5 w1_sci6 [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abcO [2;31m->[0m
                 ()
                 })
-               w2_sciH
-        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abdM, ipv1_abdN [2;31m#[0m) [2;31m->[0m
-        [2;31m$[0mwgo4 w_sciE w1_sciF ([2;31m-#[0m ww_sciK [2;35m1[0m[2;31m#[0m) ipv_abdM
+               w2_sci8
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abdd, ipv1_abde [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwgo4 w_sci5 w1_sci6 ([2;31m-#[0m ww_scib [2;35m1[0m[2;31m#[0m) ipv_abdd
         };
-      True [2;31m->[0m ([2;31m#[0m w2_sciH, () [2;31m#[0m)
+      True [2;31m->[0m ([2;31m#[0m w2_sci8, () [2;31m#[0m)
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 7, types: 3, coercions: 0}
@@ -144,9 +144,9 @@ main_eta1 [2;31m=[0m
  Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [[2;35m0[0m [2;35m0[0m] [2;35m40[0m [2;35m0[0m}]
 [2;31m$[0mwmain3 [2;31m=[0m
-  [2;31m\[0m (ww_sciR [2;31m::[0m Int[2;31m#[0m)
-    (w_sciO [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;31m$[0mwgo4 main_eta1 myList ww_sciR w_sciO
+  [2;31m\[0m (ww_scii [2;31m::[0m Int[2;31m#[0m)
+    (w_scif [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;31m$[0mwgo4 main_eta1 myList ww_scii w_scif
 
 [2;34m--[0m[2;34m RHS size: {terms: 8, types: 5, coercions: 0}
 [0mmain18 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
@@ -159,17 +159,17 @@ main_eta1 [2;31m=[0m
  Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m2[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
-         Tmpl[2;31m=[0m [2;31m\[0m (w_sciN [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
-                 (w1_sciO [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
+         Tmpl[2;31m=[0m [2;31m\[0m (w_scie [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
+                 (w1_scif [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
                     [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-                 [2;32mcase[0m w_sciN [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_sciR [Occ[2;31m=[0mOnce] [2;31m->[0m
-                 [2;31m$[0mwmain3 ww1_sciR w1_sciO
+                 [2;32mcase[0m w_scie [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scii [Occ[2;31m=[0mOnce] [2;31m->[0m
+                 [2;31m$[0mwmain3 ww1_scii w1_scif
                  }}]
 main18 [2;31m=[0m
-  [2;31m\[0m (w_sciN [2;31m::[0m Int64)
-    (w1_sciO [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m w_sciN [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_sciR [2;31m->[0m
-    [2;31m$[0mwmain3 ww1_sciR w1_sciO
+  [2;31m\[0m (w_scie [2;31m::[0m Int64)
+    (w1_scif [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m w_scie [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scii [2;31m->[0m
+    [2;31m$[0mwmain3 ww1_scii w1_scif
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 8}
@@ -209,24 +209,24 @@ main16 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"F.sum"[0m[2;31m#[0m
  Arity[2;31m=[0m[2;35m4[0m,
 
 [2;31m$[0mwgo2 [2;31m=[0m
-  [2;31m\[0m (w_sciU [2;31m::[0m [Int] [2;31m->[0m Int)
-    (w1_sciV [2;31m::[0m [Int])
-    (ww_scj0 [2;31m::[0m Int[2;31m#[0m)
-    (w2_sciX [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_scj0 [2;35m0[0m[2;31m#[0m)
+  [2;31m\[0m (w_scil [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_scim [2;31m::[0m [Int])
+    (ww_scir [2;31m::[0m Int[2;31m#[0m)
+    (w2_scio [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_scir [2;35m0[0m[2;31m#[0m)
     [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       False [2;31m->[0m
         [2;32mcase[0m seq[2;31m#[0m
                [2;31m@[0m ()
                [2;31m@[0m RealWorld
-               ([2;32mcase[0m w_sciU w1_sciV [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abdn [2;31m->[0m
+               ([2;32mcase[0m w_scil w1_scim [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abcO [2;31m->[0m
                 ()
                 })
-               w2_sciX
-        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abdM, ipv1_abdN [2;31m#[0m) [2;31m->[0m
-        [2;31m$[0mwgo2 w_sciU w1_sciV ([2;31m-#[0m ww_scj0 [2;35m1[0m[2;31m#[0m) ipv_abdM
+               w2_scio
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abdd, ipv1_abde [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwgo2 w_scil w1_scim ([2;31m-#[0m ww_scir [2;35m1[0m[2;31m#[0m) ipv_abdd
         };
-      True [2;31m->[0m ([2;31m#[0m w2_sciX, () [2;31m#[0m)
+      True [2;31m->[0m ([2;31m#[0m w2_scio, () [2;31m#[0m)
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 7, types: 3, coercions: 0}
@@ -240,9 +240,9 @@ main16 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"F.sum"[0m[2;31m#[0m
  Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [[2;35m0[0m [2;35m0[0m] [2;35m40[0m [2;35m0[0m}]
 [2;31m$[0mwmain2 [2;31m=[0m
-  [2;31m\[0m (ww_scj7 [2;31m::[0m Int[2;31m#[0m)
-    (w_scj4 [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;31m$[0mwgo2 [2;31m$[0mssum myList ww_scj7 w_scj4
+  [2;31m\[0m (ww_sciy [2;31m::[0m Int[2;31m#[0m)
+    (w_sciv [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;31m$[0mwgo2 [2;31m$[0mssum myList ww_sciy w_sciv
 
 [2;34m--[0m[2;34m RHS size: {terms: 8, types: 5, coercions: 0}
 [0mmain15 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
@@ -255,17 +255,17 @@ main16 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"F.sum"[0m[2;31m#[0m
  Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m2[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
-         Tmpl[2;31m=[0m [2;31m\[0m (w_scj3 [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
-                 (w1_scj4 [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
+         Tmpl[2;31m=[0m [2;31m\[0m (w_sciu [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
+                 (w1_sciv [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
                     [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-                 [2;32mcase[0m w_scj3 [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scj7 [Occ[2;31m=[0mOnce] [2;31m->[0m
-                 [2;31m$[0mwmain2 ww1_scj7 w1_scj4
+                 [2;32mcase[0m w_sciu [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_sciy [Occ[2;31m=[0mOnce] [2;31m->[0m
+                 [2;31m$[0mwmain2 ww1_sciy w1_sciv
                  }}]
 main15 [2;31m=[0m
-  [2;31m\[0m (w_scj3 [2;31m::[0m Int64)
-    (w1_scj4 [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m w_scj3 [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scj7 [2;31m->[0m
-    [2;31m$[0mwmain2 ww1_scj7 w1_scj4
+  [2;31m\[0m (w_sciu [2;31m::[0m Int64)
+    (w1_sciv [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m w_sciu [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_sciy [2;31m->[0m
+    [2;31m$[0mwmain2 ww1_sciy w1_sciv
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 8}
@@ -299,12 +299,12 @@ main13 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"psum2"[0m[2;31m#[0m
   [2;31m::[0m [Int] [2;31m->[0m Int[2;31m#[0m [2;31m->[0m Int[2;31m#[0m
 
 [2;31m$[0mwgo [2;31m=[0m
-  [2;31m\[0m (w_scja [2;31m::[0m [Int]) (ww_scje [2;31m::[0m Int[2;31m#[0m) [2;31m->[0m
-    [2;32mcase[0m w_scja [2;32mof[0m _ [Occ[2;31m=[0mDead] {
-      [] [2;31m->[0m ww_scje;
-      [2;31m:[0m y_abcp ys_abcq [2;31m->[0m
-        [2;32mcase[0m y_abcp [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m y1_abbU [2;31m->[0m
-        [2;31m$[0mwgo ys_abcq ([2;31m+#[0m ww_scje y1_abbU)
+  [2;31m\[0m (w_sciB [2;31m::[0m [Int]) (ww_sciF [2;31m::[0m Int[2;31m#[0m) [2;31m->[0m
+    [2;32mcase[0m w_sciB [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+      [] [2;31m->[0m ww_sciF;
+      [2;31m:[0m y_abbQ ys_abbR [2;31m->[0m
+        [2;32mcase[0m y_abbQ [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m y1_abbl [2;31m->[0m
+        [2;31m$[0mwgo ys_abbR ([2;31m+#[0m ww_sciF y1_abbl)
         }
     }
 
@@ -316,14 +316,14 @@ main13 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"psum2"[0m[2;31m#[0m
  Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m1[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
-         Tmpl[2;31m=[0m [2;31m\[0m (w_scjk [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
-                 [2;32mcase[0m [2;31m$[0mwgo w_scjk [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_scjn { __DEFAULT [2;31m->[0m
-                 I[2;31m#[0m ww_scjn
+         Tmpl[2;31m=[0m [2;31m\[0m (w_sciL [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
+                 [2;32mcase[0m [2;31m$[0mwgo w_sciL [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_sciO { __DEFAULT [2;31m->[0m
+                 I[2;31m#[0m ww_sciO
                  }}]
 main_eta [2;31m=[0m
-  [2;31m\[0m (w_scjk [2;31m::[0m [Int]) [2;31m->[0m
-    [2;32mcase[0m [2;31m$[0mwgo w_scjk [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_scjn { __DEFAULT [2;31m->[0m
-    I[2;31m#[0m ww_scjn
+  [2;31m\[0m (w_sciL [2;31m::[0m [Int]) [2;31m->[0m
+    [2;32mcase[0m [2;31m$[0mwgo w_sciL [2;35m0[0m[2;31m#[0m [2;32mof[0m ww_sciO { __DEFAULT [2;31m->[0m
+    I[2;31m#[0m ww_sciO
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 30, types: 28, coercions: 0}
@@ -337,24 +337,24 @@ main_eta [2;31m=[0m
  Arity[2;31m=[0m[2;35m4[0m,
 
 [2;31m$[0mwgo1 [2;31m=[0m
-  [2;31m\[0m (w_scjp [2;31m::[0m [Int] [2;31m->[0m Int)
-    (w1_scjq [2;31m::[0m [Int])
-    (ww_scjv [2;31m::[0m Int[2;31m#[0m)
-    (w2_scjs [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_scjv [2;35m0[0m[2;31m#[0m)
+  [2;31m\[0m (w_sciQ [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_sciR [2;31m::[0m [Int])
+    (ww_sciW [2;31m::[0m Int[2;31m#[0m)
+    (w2_sciT [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_sciW [2;35m0[0m[2;31m#[0m)
     [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       False [2;31m->[0m
         [2;32mcase[0m seq[2;31m#[0m
                [2;31m@[0m ()
                [2;31m@[0m RealWorld
-               ([2;32mcase[0m w_scjp w1_scjq [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abdn [2;31m->[0m
+               ([2;32mcase[0m w_sciQ w1_sciR [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abcO [2;31m->[0m
                 ()
                 })
-               w2_scjs
-        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abdM, ipv1_abdN [2;31m#[0m) [2;31m->[0m
-        [2;31m$[0mwgo1 w_scjp w1_scjq ([2;31m-#[0m ww_scjv [2;35m1[0m[2;31m#[0m) ipv_abdM
+               w2_sciT
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abdd, ipv1_abde [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwgo1 w_sciQ w1_sciR ([2;31m-#[0m ww_sciW [2;35m1[0m[2;31m#[0m) ipv_abdd
         };
-      True [2;31m->[0m ([2;31m#[0m w2_scjs, () [2;31m#[0m)
+      True [2;31m->[0m ([2;31m#[0m w2_sciT, () [2;31m#[0m)
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 7, types: 3, coercions: 0}
@@ -368,9 +368,9 @@ main_eta [2;31m=[0m
  Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [[2;35m0[0m [2;35m0[0m] [2;35m40[0m [2;35m0[0m}]
 [2;31m$[0mwmain1 [2;31m=[0m
-  [2;31m\[0m (ww_scjC [2;31m::[0m Int[2;31m#[0m)
-    (w_scjz [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;31m$[0mwgo1 main_eta myList ww_scjC w_scjz
+  [2;31m\[0m (ww_scj3 [2;31m::[0m Int[2;31m#[0m)
+    (w_scj0 [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;31m$[0mwgo1 main_eta myList ww_scj3 w_scj0
 
 [2;34m--[0m[2;34m RHS size: {terms: 8, types: 5, coercions: 0}
 [0mmain12 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
@@ -383,17 +383,17 @@ main_eta [2;31m=[0m
  Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m2[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
-         Tmpl[2;31m=[0m [2;31m\[0m (w_scjy [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
-                 (w1_scjz [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
+         Tmpl[2;31m=[0m [2;31m\[0m (w_sciZ [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
+                 (w1_scj0 [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
                     [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-                 [2;32mcase[0m w_scjy [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjC [Occ[2;31m=[0mOnce] [2;31m->[0m
-                 [2;31m$[0mwmain1 ww1_scjC w1_scjz
+                 [2;32mcase[0m w_sciZ [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scj3 [Occ[2;31m=[0mOnce] [2;31m->[0m
+                 [2;31m$[0mwmain1 ww1_scj3 w1_scj0
                  }}]
 main12 [2;31m=[0m
-  [2;31m\[0m (w_scjy [2;31m::[0m Int64)
-    (w1_scjz [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m w_scjy [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjC [2;31m->[0m
-    [2;31m$[0mwmain1 ww1_scjC w1_scjz
+  [2;31m\[0m (w_sciZ [2;31m::[0m Int64)
+    (w1_scj0 [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m w_sciZ [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scj3 [2;31m->[0m
+    [2;31m$[0mwmain1 ww1_scj3 w1_scj0
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 8}
@@ -433,24 +433,24 @@ main10 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"P.sum"[0m[2;31m#[0m
  Arity[2;31m=[0m[2;35m4[0m,
 
 [2;31m$[0mwgo12 [2;31m=[0m
-  [2;31m\[0m (w_scjF [2;31m::[0m [Int] [2;31m->[0m Int)
-    (w1_scjG [2;31m::[0m [Int])
-    (ww_scjL [2;31m::[0m Int[2;31m#[0m)
-    (w2_scjI [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_scjL [2;35m0[0m[2;31m#[0m)
+  [2;31m\[0m (w_scj6 [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_scj7 [2;31m::[0m [Int])
+    (ww_scjc [2;31m::[0m Int[2;31m#[0m)
+    (w2_scj9 [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_scjc [2;35m0[0m[2;31m#[0m)
     [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       False [2;31m->[0m
         [2;32mcase[0m seq[2;31m#[0m
                [2;31m@[0m ()
                [2;31m@[0m RealWorld
-               ([2;32mcase[0m w_scjF w1_scjG [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abdn [2;31m->[0m
+               ([2;32mcase[0m w_scj6 w1_scj7 [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_abcO [2;31m->[0m
                 ()
                 })
-               w2_scjI
-        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abdM, ipv1_abdN [2;31m#[0m) [2;31m->[0m
-        [2;31m$[0mwgo12 w_scjF w1_scjG ([2;31m-#[0m ww_scjL [2;35m1[0m[2;31m#[0m) ipv_abdM
+               w2_scj9
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_abdd, ipv1_abde [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwgo12 w_scj6 w1_scj7 ([2;31m-#[0m ww_scjc [2;35m1[0m[2;31m#[0m) ipv_abdd
         };
-      True [2;31m->[0m ([2;31m#[0m w2_scjI, () [2;31m#[0m)
+      True [2;31m->[0m ([2;31m#[0m w2_scj9, () [2;31m#[0m)
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 7, types: 3, coercions: 0}
@@ -464,9 +464,9 @@ main10 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"P.sum"[0m[2;31m#[0m
  Unf[2;31m=[0mUnf{Src[2;31m=<[0mvanilla[2;31m>[0m, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue, Guidance[2;31m=[0mIF_ARGS [[2;35m0[0m [2;35m0[0m] [2;35m40[0m [2;35m0[0m}]
 [2;31m$[0mwmain [2;31m=[0m
-  [2;31m\[0m (ww_scjS [2;31m::[0m Int[2;31m#[0m)
-    (w_scjP [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;31m$[0mwgo12 [2;31m$[0mssum myList ww_scjS w_scjP
+  [2;31m\[0m (ww_scjj [2;31m::[0m Int[2;31m#[0m)
+    (w_scjg [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;31m$[0mwgo12 [2;31m$[0mssum myList ww_scjj w_scjg
 
 [2;34m--[0m[2;34m RHS size: {terms: 8, types: 5, coercions: 0}
 [0mmain9 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
@@ -479,17 +479,17 @@ main10 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"P.sum"[0m[2;31m#[0m
  Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Value[2;31m=[0mTrue, ConLike[2;31m=[0mTrue,
          WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mALWAYS_IF(arity[2;31m=[0m[2;35m2[0m,unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
-         Tmpl[2;31m=[0m [2;31m\[0m (w_scjO [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
-                 (w1_scjP [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
+         Tmpl[2;31m=[0m [2;31m\[0m (w_scjf [Occ[2;31m=[0mOnce[2;31m![0m] [2;31m::[0m Int64)
+                 (w1_scjg [Occ[2;31m=[0mOnce, OS[2;31m=[0mOneShot]
                     [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-                 [2;32mcase[0m w_scjO [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjS [Occ[2;31m=[0mOnce] [2;31m->[0m
-                 [2;31m$[0mwmain ww1_scjS w1_scjP
+                 [2;32mcase[0m w_scjf [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjj [Occ[2;31m=[0mOnce] [2;31m->[0m
+                 [2;31m$[0mwmain ww1_scjj w1_scjg
                  }}]
 main9 [2;31m=[0m
-  [2;31m\[0m (w_scjO [2;31m::[0m Int64)
-    (w1_scjP [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m w_scjO [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjS [2;31m->[0m
-    [2;31m$[0mwmain ww1_scjS w1_scjP
+  [2;31m\[0m (w_scjf [2;31m::[0m Int64)
+    (w1_scjg [OS[2;31m=[0mOneShot] [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m w_scjf [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_scjj [2;31m->[0m
+    [2;31m$[0mwmain ww1_scjj w1_scjg
     }
 
 [2;34m--[0m[2;34m RHS size: {terms: 3, types: 0, coercions: 8}
@@ -636,8 +636,8 @@ main21 [2;31m=[0m
 
 [2;34m------[0m[2;34m Local rules for imported ids --------
 [0m[2;35m"SPEC/Main sum @ Int"[0m [ALWAYS]
-    forall ([2;31m$[0mdNum_sbaW [2;31m::[0m Num Int)[2;31m.[0m
-      sum [2;31m@[0m Int [2;31m$[0mdNum_sbaW
+    forall ([2;31m$[0mdNum_sbap [2;31m::[0m Num Int)[2;31m.[0m
+      sum [2;31m@[0m Int [2;31m$[0mdNum_sbap
       [2;31m=[0m [2;31m$[0mssum
 
 [2;31m====================[0m Asm code [2;31m====================[0m
@@ -2199,9 +2199,9 @@ ScrA_srt[2;31m:[0m
 	[2;31m.[0mquad	main12_closure
 	[2;31m.[0mquad	[2;31m$[0mwmain_closure
 	[2;31m.[0mquad	main9_closure
-	[2;31m.[0mquad	main2_closure
-	[2;31m.[0mquad	Criterion.Options.defaultConfig_closure
 	[2;31m.[0mquad	Criterion.defaultMain2_closure
+	[2;31m.[0mquad	Criterion.Options.defaultConfig_closure
+	[2;31m.[0mquad	main2_closure
 	[2;31m.[0mquad	main1_closure
 	[2;31m.[0mquad	runMainIO1_closure
 	[2;31m.[0mquad	main21_closure

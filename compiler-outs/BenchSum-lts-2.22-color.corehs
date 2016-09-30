@@ -31,13 +31,13 @@ main21 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"fsum2"[0m[2;31m#[0m
 [2;31m$[0mwgo1 [Occ[2;31m=[0mLoopBreaker] [2;31m::[0m [Int] [2;31m->[0m Int[2;31m#[0m
 
 [2;31m$[0mwgo1 [2;31m=[0m
-  [2;31m\[0m (w_s7l4 [2;31m::[0m [Int]) [2;31m->[0m
-    [2;32mcase[0m w_s7l4 [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+  [2;31m\[0m (w_s7kC [2;31m::[0m [Int]) [2;31m->[0m
+    [2;32mcase[0m w_s7kC [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       [] [2;31m->[0m [2;35m0[0m;
-      [2;31m:[0m y_a7jO ys_a7jP [2;31m->[0m
-        [2;32mcase[0m y_a7jO [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m x_a7kd [2;31m->[0m
-        [2;32mcase[0m [2;31m$[0mwgo1 ys_a7jP [2;32mof[0m ww_s7l7 { __DEFAULT [2;31m->[0m
-        [2;31m+#[0m x_a7kd ww_s7l7
+      [2;31m:[0m y_a7jm ys_a7jn [2;31m->[0m
+        [2;32mcase[0m y_a7jm [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m x_a7jL [2;31m->[0m
+        [2;32mcase[0m [2;31m$[0mwgo1 ys_a7jn [2;32mof[0m ww_s7kF { __DEFAULT [2;31m->[0m
+        [2;31m+#[0m x_a7jL ww_s7kF
         }
         }
     }
@@ -50,16 +50,16 @@ main20 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
  Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Arity[2;31m=[0m[2;35m1[0m, Value[2;31m=[0mTrue,
          ConLike[2;31m=[0mTrue, WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mALWAYS_IF(unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
-         Tmpl[2;31m=[0m [2;31m\[0m (w_s7l9 [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
-                 [2;32mcase[0m [2;31m$[0mwgo1 w_s7l9 [2;32mof[0m ww_s7lc { __DEFAULT [2;31m->[0m
-                 (I[2;31m#[0m ww_s7lc)
+         Tmpl[2;31m=[0m [2;31m\[0m (w_s7kH [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
+                 [2;32mcase[0m [2;31m$[0mwgo1 w_s7kH [2;32mof[0m ww_s7kK { __DEFAULT [2;31m->[0m
+                 (I[2;31m#[0m ww_s7kK)
                  `cast` (Sym (Data.Monoid.NTCo[2;31m:[0mSum[[2;35m0[0m] [2;31m<[0mInt[2;31m>[0m_R)
                          [2;31m::[0m Int [2;31m~#[0m Data.Monoid.Sum Int)
                  }}]
 main20 [2;31m=[0m
-  [2;31m\[0m (w_s7l9 [2;31m::[0m [Int]) [2;31m->[0m
-    [2;32mcase[0m [2;31m$[0mwgo1 w_s7l9 [2;32mof[0m ww_s7lc { __DEFAULT [2;31m->[0m
-    (I[2;31m#[0m ww_s7lc)
+  [2;31m\[0m (w_s7kH [2;31m::[0m [Int]) [2;31m->[0m
+    [2;32mcase[0m [2;31m$[0mwgo1 w_s7kH [2;32mof[0m ww_s7kK { __DEFAULT [2;31m->[0m
+    (I[2;31m#[0m ww_s7kK)
     `cast` (Sym (Data.Monoid.NTCo[2;31m:[0mSum[[2;35m0[0m] [2;31m<[0mInt[2;31m>[0m_R)
             [2;31m::[0m Int [2;31m~#[0m Data.Monoid.Sum Int)
     }
@@ -74,24 +74,24 @@ main20 [2;31m=[0m
  Arity[2;31m=[0m[2;35m4[0m,
 
 [2;31m$[0mwa3 [2;31m=[0m
-  [2;31m\[0m (w_s7le [2;31m::[0m [Int] [2;31m->[0m Int)
-    (w1_s7lf [2;31m::[0m [Int])
-    (ww_s7lk [2;31m::[0m Int[2;31m#[0m)
-    (w2_s7lh [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_s7lk [2;35m0[0m)
+  [2;31m\[0m (w_s7kM [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_s7kN [2;31m::[0m [Int])
+    (ww_s7kS [2;31m::[0m Int[2;31m#[0m)
+    (w2_s7kP [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_s7kS [2;35m0[0m)
     [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       False [2;31m->[0m
         [2;32mcase[0m seq[2;31m#[0m
                [2;31m@[0m ()
                [2;31m@[0m RealWorld
-               ([2;32mcase[0m w_s7le w1_s7lf [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_a5p9 [2;31m->[0m
+               ([2;32mcase[0m w_s7kM w1_s7kN [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_a5oH [2;31m->[0m
                 ()
                 })
-               w2_s7lh
-        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_a5p0, ipv1_a5p1 [2;31m#[0m) [2;31m->[0m
-        [2;31m$[0mwa3 w_s7le w1_s7lf ([2;31m-#[0m ww_s7lk [2;35m1[0m) ipv_a5p0
+               w2_s7kP
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_a5oy, ipv1_a5oz [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwa3 w_s7kM w1_s7kN ([2;31m-#[0m ww_s7kS [2;35m1[0m) ipv_a5oy
         };
-      True [2;31m->[0m ([2;31m#[0m w2_s7lh, () [2;31m#[0m)
+      True [2;31m->[0m ([2;31m#[0m w2_s7kP, () [2;31m#[0m)
     }
 
 main19
@@ -105,9 +105,9 @@ main19
          ConLike[2;31m=[0mTrue, WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mIF_ARGS [[2;35m20[0m [2;35m0[0m] [2;35m50[0m [2;35m0[0m}]
 main19 [2;31m=[0m
-  [2;31m\[0m (eta2_a4DJ [2;31m::[0m Int64)
-    (eta3_a4T9 [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m eta2_a4DJ [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_s7lk [2;31m->[0m
+  [2;31m\[0m (eta2_a4Dh [2;31m::[0m Int64)
+    (eta3_a4SH [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m eta2_a4Dh [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_s7kS [2;31m->[0m
     [2;31m$[0mwa3
       (main20
        `cast` ([2;31m<[0m[Int][2;31m>[0m_R
@@ -116,8 +116,8 @@ main19 [2;31m=[0m
                     [2;31m~#[0m
                   ([Int] [2;31m->[0m Int)))
       myList
-      ww1_s7lk
-      eta3_a4T9
+      ww1_s7kS
+      eta3_a4SH
     }
 
 main18 [2;31m::[0m Criterion.Types.Benchmark
@@ -149,13 +149,13 @@ main17 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"F.sum"[0m[2;31m#[0m
 [2;31m$[0mwgo [Occ[2;31m=[0mLoopBreaker] [2;31m::[0m [Int] [2;31m->[0m Int[2;31m#[0m
 
 [2;31m$[0mwgo [2;31m=[0m
-  [2;31m\[0m (w_s7ln [2;31m::[0m [Int]) [2;31m->[0m
-    [2;32mcase[0m w_s7ln [2;32mof[0m _ [Occ[2;31m=[0mDead] {
+  [2;31m\[0m (w_s7kV [2;31m::[0m [Int]) [2;31m->[0m
+    [2;32mcase[0m w_s7kV [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       [] [2;31m->[0m [2;35m0[0m;
-      [2;31m:[0m y_a7jO ys_a7jP [2;31m->[0m
-        [2;32mcase[0m y_a7jO [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m x_a7kd [2;31m->[0m
-        [2;32mcase[0m [2;31m$[0mwgo ys_a7jP [2;32mof[0m ww_s7lq { __DEFAULT [2;31m->[0m
-        [2;31m+#[0m x_a7kd ww_s7lq
+      [2;31m:[0m y_a7jm ys_a7jn [2;31m->[0m
+        [2;32mcase[0m y_a7jm [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m x_a7jL [2;31m->[0m
+        [2;32mcase[0m [2;31m$[0mwgo ys_a7jn [2;32mof[0m ww_s7kY { __DEFAULT [2;31m->[0m
+        [2;31m+#[0m x_a7jL ww_s7kY
         }
         }
     }
@@ -168,16 +168,16 @@ main16 [InlPrag[2;31m=[0mINLINE[[2;35m0[0m]]
  Unf[2;31m=[0mUnf{Src[2;31m=[0mInlineStable, TopLvl[2;31m=[0mTrue, Arity[2;31m=[0m[2;35m1[0m, Value[2;31m=[0mTrue,
          ConLike[2;31m=[0mTrue, WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mALWAYS_IF(unsat_ok[2;31m=[0mTrue,boring_ok[2;31m=[0mFalse)
-         Tmpl[2;31m=[0m [2;31m\[0m (w_s7ls [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
-                 [2;32mcase[0m [2;31m$[0mwgo w_s7ls [2;32mof[0m ww_s7lv { __DEFAULT [2;31m->[0m
-                 (I[2;31m#[0m ww_s7lv)
+         Tmpl[2;31m=[0m [2;31m\[0m (w_s7l0 [Occ[2;31m=[0mOnce] [2;31m::[0m [Int]) [2;31m->[0m
+                 [2;32mcase[0m [2;31m$[0mwgo w_s7l0 [2;32mof[0m ww_s7l3 { __DEFAULT [2;31m->[0m
+                 (I[2;31m#[0m ww_s7l3)
                  `cast` (Sym (Data.Monoid.NTCo[2;31m:[0mSum[[2;35m0[0m] [2;31m<[0mInt[2;31m>[0m_R)
                          [2;31m::[0m Int [2;31m~#[0m Data.Monoid.Sum Int)
                  }}]
 main16 [2;31m=[0m
-  [2;31m\[0m (w_s7ls [2;31m::[0m [Int]) [2;31m->[0m
-    [2;32mcase[0m [2;31m$[0mwgo w_s7ls [2;32mof[0m ww_s7lv { __DEFAULT [2;31m->[0m
-    (I[2;31m#[0m ww_s7lv)
+  [2;31m\[0m (w_s7l0 [2;31m::[0m [Int]) [2;31m->[0m
+    [2;32mcase[0m [2;31m$[0mwgo w_s7l0 [2;32mof[0m ww_s7l3 { __DEFAULT [2;31m->[0m
+    (I[2;31m#[0m ww_s7l3)
     `cast` (Sym (Data.Monoid.NTCo[2;31m:[0mSum[[2;35m0[0m] [2;31m<[0mInt[2;31m>[0m_R)
             [2;31m::[0m Int [2;31m~#[0m Data.Monoid.Sum Int)
     }
@@ -192,24 +192,24 @@ main16 [2;31m=[0m
  Arity[2;31m=[0m[2;35m4[0m,
 
 [2;31m$[0mwa2 [2;31m=[0m
-  [2;31m\[0m (w_s7lx [2;31m::[0m [Int] [2;31m->[0m Int)
-    (w1_s7ly [2;31m::[0m [Int])
-    (ww_s7lD [2;31m::[0m Int[2;31m#[0m)
-    (w2_s7lA [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_s7lD [2;35m0[0m)
+  [2;31m\[0m (w_s7l5 [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_s7l6 [2;31m::[0m [Int])
+    (ww_s7lb [2;31m::[0m Int[2;31m#[0m)
+    (w2_s7l8 [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_s7lb [2;35m0[0m)
     [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       False [2;31m->[0m
         [2;32mcase[0m seq[2;31m#[0m
                [2;31m@[0m ()
                [2;31m@[0m RealWorld
-               ([2;32mcase[0m w_s7lx w1_s7ly [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_a5p9 [2;31m->[0m
+               ([2;32mcase[0m w_s7l5 w1_s7l6 [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_a5oH [2;31m->[0m
                 ()
                 })
-               w2_s7lA
-        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_a5p0, ipv1_a5p1 [2;31m#[0m) [2;31m->[0m
-        [2;31m$[0mwa2 w_s7lx w1_s7ly ([2;31m-#[0m ww_s7lD [2;35m1[0m) ipv_a5p0
+               w2_s7l8
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_a5oy, ipv1_a5oz [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwa2 w_s7l5 w1_s7l6 ([2;31m-#[0m ww_s7lb [2;35m1[0m) ipv_a5oy
         };
-      True [2;31m->[0m ([2;31m#[0m w2_s7lA, () [2;31m#[0m)
+      True [2;31m->[0m ([2;31m#[0m w2_s7l8, () [2;31m#[0m)
     }
 
 main15
@@ -223,9 +223,9 @@ main15
          ConLike[2;31m=[0mTrue, WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mIF_ARGS [[2;35m20[0m [2;35m0[0m] [2;35m50[0m [2;35m0[0m}]
 main15 [2;31m=[0m
-  [2;31m\[0m (eta2_X4Ez [2;31m::[0m Int64)
-    (eta3_X4U0 [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m eta2_X4Ez [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_s7lD [2;31m->[0m
+  [2;31m\[0m (eta2_X4E7 [2;31m::[0m Int64)
+    (eta3_X4Ty [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m eta2_X4E7 [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_s7lb [2;31m->[0m
     [2;31m$[0mwa2
       (main16
        `cast` ([2;31m<[0m[Int][2;31m>[0m_R
@@ -234,8 +234,8 @@ main15 [2;31m=[0m
                     [2;31m~#[0m
                   ([Int] [2;31m->[0m Int)))
       myList
-      ww1_s7lD
-      eta3_X4U0
+      ww1_s7lb
+      eta3_X4Ty
     }
 
 main14 [2;31m::[0m Criterion.Types.Benchmark
@@ -274,24 +274,24 @@ main13 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"psum2"[0m[2;31m#[0m
  Arity[2;31m=[0m[2;35m4[0m,
 
 [2;31m$[0mwa1 [2;31m=[0m
-  [2;31m\[0m (w_s7lG [2;31m::[0m [Int] [2;31m->[0m Int)
-    (w1_s7lH [2;31m::[0m [Int])
-    (ww_s7lM [2;31m::[0m Int[2;31m#[0m)
-    (w2_s7lJ [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_s7lM [2;35m0[0m)
+  [2;31m\[0m (w_s7le [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_s7lf [2;31m::[0m [Int])
+    (ww_s7lk [2;31m::[0m Int[2;31m#[0m)
+    (w2_s7lh [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_s7lk [2;35m0[0m)
     [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       False [2;31m->[0m
         [2;32mcase[0m seq[2;31m#[0m
                [2;31m@[0m ()
                [2;31m@[0m RealWorld
-               ([2;32mcase[0m w_s7lG w1_s7lH [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_a5p9 [2;31m->[0m
+               ([2;32mcase[0m w_s7le w1_s7lf [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_a5oH [2;31m->[0m
                 ()
                 })
-               w2_s7lJ
-        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_a5p0, ipv1_a5p1 [2;31m#[0m) [2;31m->[0m
-        [2;31m$[0mwa1 w_s7lG w1_s7lH ([2;31m-#[0m ww_s7lM [2;35m1[0m) ipv_a5p0
+               w2_s7lh
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_a5oy, ipv1_a5oz [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwa1 w_s7le w1_s7lf ([2;31m-#[0m ww_s7lk [2;35m1[0m) ipv_a5oy
         };
-      True [2;31m->[0m ([2;31m#[0m w2_s7lJ, () [2;31m#[0m)
+      True [2;31m->[0m ([2;31m#[0m w2_s7lh, () [2;31m#[0m)
     }
 
 main12
@@ -305,10 +305,10 @@ main12
          ConLike[2;31m=[0mTrue, WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mIF_ARGS [[2;35m20[0m [2;35m0[0m] [2;35m50[0m [2;35m0[0m}]
 main12 [2;31m=[0m
-  [2;31m\[0m (eta2_X4EG [2;31m::[0m Int64)
-    (eta3_X4U7 [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m eta2_X4EG [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_s7lM [2;31m->[0m
-    [2;31m$[0mwa1 Data.List.sum_[2;31m$[0mssum1 myList ww1_s7lM eta3_X4U7
+  [2;31m\[0m (eta2_X4Ee [2;31m::[0m Int64)
+    (eta3_X4TF [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m eta2_X4Ee [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_s7lk [2;31m->[0m
+    [2;31m$[0mwa1 Data.List.sum_[2;31m$[0mssum1 myList ww1_s7lk eta3_X4TF
     }
 
 main11 [2;31m::[0m Criterion.Types.Benchmark
@@ -347,24 +347,24 @@ main10 [2;31m=[0m unpackCString[2;31m#[0m [2;35m"P.sum"[0m[2;31m#[0m
  Arity[2;31m=[0m[2;35m4[0m,
 
 [2;31m$[0mwa [2;31m=[0m
-  [2;31m\[0m (w_s7lP [2;31m::[0m [Int] [2;31m->[0m Int)
-    (w1_s7lQ [2;31m::[0m [Int])
-    (ww_s7lV [2;31m::[0m Int[2;31m#[0m)
-    (w2_s7lS [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_s7lV [2;35m0[0m)
+  [2;31m\[0m (w_s7ln [2;31m::[0m [Int] [2;31m->[0m Int)
+    (w1_s7lo [2;31m::[0m [Int])
+    (ww_s7lt [2;31m::[0m Int[2;31m#[0m)
+    (w2_s7lq [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m tagToEnum[2;31m#[0m [2;31m@[0m Bool ([2;31m<=#[0m ww_s7lt [2;35m0[0m)
     [2;32mof[0m _ [Occ[2;31m=[0mDead] {
       False [2;31m->[0m
         [2;32mcase[0m seq[2;31m#[0m
                [2;31m@[0m ()
                [2;31m@[0m RealWorld
-               ([2;32mcase[0m w_s7lP w1_s7lQ [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_a5p9 [2;31m->[0m
+               ([2;32mcase[0m w_s7ln w1_s7lo [2;32mof[0m _ [Occ[2;31m=[0mDead] { I[2;31m#[0m ipv_a5oH [2;31m->[0m
                 ()
                 })
-               w2_s7lS
-        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_a5p0, ipv1_a5p1 [2;31m#[0m) [2;31m->[0m
-        [2;31m$[0mwa w_s7lP w1_s7lQ ([2;31m-#[0m ww_s7lV [2;35m1[0m) ipv_a5p0
+               w2_s7lq
+        [2;32mof[0m _ [Occ[2;31m=[0mDead] { ([2;31m#[0m ipv_a5oy, ipv1_a5oz [2;31m#[0m) [2;31m->[0m
+        [2;31m$[0mwa w_s7ln w1_s7lo ([2;31m-#[0m ww_s7lt [2;35m1[0m) ipv_a5oy
         };
-      True [2;31m->[0m ([2;31m#[0m w2_s7lS, () [2;31m#[0m)
+      True [2;31m->[0m ([2;31m#[0m w2_s7lq, () [2;31m#[0m)
     }
 
 main9
@@ -378,10 +378,10 @@ main9
          ConLike[2;31m=[0mTrue, WorkFree[2;31m=[0mTrue, Expandable[2;31m=[0mTrue,
          Guidance[2;31m=[0mIF_ARGS [[2;35m20[0m [2;35m0[0m] [2;35m50[0m [2;35m0[0m}]
 main9 [2;31m=[0m
-  [2;31m\[0m (eta2_X4EK [2;31m::[0m Int64)
-    (eta3_X4Ub [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
-    [2;32mcase[0m eta2_X4EK [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_s7lV [2;31m->[0m
-    [2;31m$[0mwa Data.List.sum_[2;31m$[0mssum1 myList ww1_s7lV eta3_X4Ub
+  [2;31m\[0m (eta2_X4Ei [2;31m::[0m Int64)
+    (eta3_X4TJ [2;31m::[0m State[2;31m#[0m RealWorld) [2;31m->[0m
+    [2;32mcase[0m eta2_X4Ei [2;32mof[0m _ [Occ[2;31m=[0mDead] { I64[2;31m#[0m ww1_s7lt [2;31m->[0m
+    [2;31m$[0mwa Data.List.sum_[2;31m$[0mssum1 myList ww1_s7lt eta3_X4TJ
     }
 
 main8 [2;31m::[0m Criterion.Types.Benchmark
@@ -1873,9 +1873,9 @@ S7u7_srt[2;31m:[0m
 	[2;31m.[0mquad	main15_closure
 	[2;31m.[0mquad	main12_closure
 	[2;31m.[0mquad	main9_closure
-	[2;31m.[0mquad	main2_closure
-	[2;31m.[0mquad	Criterion.Options.defaultConfig_closure
 	[2;31m.[0mquad	Criterion.defaultMain2_closure
+	[2;31m.[0mquad	Criterion.Options.defaultConfig_closure
+	[2;31m.[0mquad	main2_closure
 	[2;31m.[0mquad	main1_closure
 	[2;31m.[0mquad	runMainIO1_closure
 	[2;31m.[0mquad	main23_closure
