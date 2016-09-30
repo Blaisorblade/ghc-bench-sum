@@ -1,4 +1,4 @@
-$ stack --resolver lts-2.22 exec -- ghc-core -w /Applications/ghc-7.8.4.app/Contents/bin/ghc -- -O BenchSum.hs
+$ stack --resolver lts-2.22 exec -- ghc-core -- -O BenchSum.hs
 [[2;35m1[0m [2;32mof[0m [2;35m1[0m] Compiling Main             ( BenchSum.hs, BenchSum.o )
 
 [2;31m====================[0m Tidy Core [2;31m====================[0m

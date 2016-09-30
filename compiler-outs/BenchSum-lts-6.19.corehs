@@ -1,4 +1,4 @@
-$ stack --resolver lts-6.19 exec -- ghc-core -w /Users/pgiarrusso/.stack/programs/x86_64-osx/ghc-7.10.3/bin/ghc --no-syntax -- -O BenchSum.hs
+$ stack --resolver lts-6.19 exec -- ghc-core --no-syntax -- -O BenchSum.hs
 [1 of 1] Compiling Main             ( BenchSum.hs, BenchSum.o )
 
 ==================== Tidy Core ====================
