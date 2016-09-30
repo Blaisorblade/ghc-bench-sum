@@ -17,3 +17,6 @@ for resolver in 2.22 6.19 7.0; do
     sayDo "stack --resolver lts-$resolver exec -- ghc-core -w $ghcPath -- -O BenchSum.hs" BenchSum-lts-$resolver-color.corehs
     sayDo "stack --resolver lts-$resolver bench" Zoutput-lts-$resolver.txt
 done
+
+echo "Cleaning out up output of ghc-core"
+git clean -f -X BenchSum*
