@@ -1,0 +1,80 @@
+-- main4 = : @ Benchmark main17 main5
+-- main5 = : @ Benchmark main14 main6
+-- main6 = : @ Benchmark main11 main7
+-- main7 =
+--   : @ Benchmark main8 ([] @ Benchmark)
+
+main4 = [main17, main14, main11, main8]
+
+main17 =
+  Criterion.Types.Benchmark
+    main19 -- main19 = unpackCString# "fsum2"#
+    main18
+main18 =
+  \ (w_scie :: Int64)
+    (w1_scif [OS=OneShot] :: State# RealWorld) ->
+    case w_scie of _ [Occ=Dead] { I64# ww1_scii ->
+    $wmain3 ww1_scii w1_scif
+    }
+$wmain3 =
+  \ (ww_scii :: Int#)
+    (w_scif [OS=OneShot] :: State# RealWorld) ->
+    $wgo4 main_eta1 myList ww_scii w_scif
+main_eta1 =
+  \ (w_sci0 :: [Int]) ->
+    case $wgo3 w_sci0 0# of ww_sci3 { __DEFAULT ->
+    I# ww_sci3
+    }
+$wgo3 =
+  \ (w_schQ :: [Int]) (ww_schU :: Int#) ->
+    case w_schQ of _ [Occ=Dead] {
+      [] -> ww_schU;
+      : y_abbQ ys_abbR ->
+        case y_abbQ of _ [Occ=Dead] { I# y1_abbl ->
+        $wgo3 ys_abbR (+# ww_schU y1_abbl)
+        }
+    }
+
+
+main14 =
+  Criterion.Types.Benchmark
+    main16 -- main16 = unpackCString# "F.sum"#
+    main15
+
+main15 =
+  \ (w_sciu :: Int64)
+    (w1_sciv [OS=OneShot] :: State# RealWorld) ->
+    case w_sciu of _ [Occ=Dead] { I64# ww1_sciy ->
+    $wmain2 ww1_sciy w1_sciv
+    }
+$wmain2 =
+  \ (ww_sciy :: Int#)
+    (w_sciv [OS=OneShot] :: State# RealWorld) ->
+    $wgo2 $ssum myList ww_sciy w_sciv
+$ssum =
+  foldl @ Int @ Int $fNumInt_$c+ lvl_rcmn
+
+
+main11 =
+  Criterion.Types.Benchmark
+    main13 -- main13 = unpackCString# "psum2"#
+    main12
+
+main12 =
+  \ (w_sciZ :: Int64)
+    (w1_scj0 [OS=OneShot] :: State# RealWorld) ->
+    case w_sciZ of _ [Occ=Dead] { I64# ww1_scj3 ->
+    $wmain1 ww1_scj3 w1_scj0
+    }
+
+main8 =
+  Criterion.Types.Benchmark
+    main10 -- main10 = unpackCString# "P.sum"#
+    main9
+
+main9 =
+  \ (w_scjf :: Int64)
+    (w1_scjg [OS=OneShot] :: State# RealWorld) ->
+    case w_scjf of _ [Occ=Dead] { I64# ww1_scjj ->
+    $wmain ww1_scjj w1_scjg
+    }
